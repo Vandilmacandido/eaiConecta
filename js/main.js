@@ -1,0 +1,3 @@
+// Navbar
+$(".button-collapse").sideNav();
+
