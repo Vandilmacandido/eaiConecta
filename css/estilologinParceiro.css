@@ -21,6 +21,7 @@ body {
     padding: 50px;
     border-radius: 30px;
     width:300px;
+    
    
     
 }
@@ -29,7 +30,7 @@ body {
     padding-bottom: 80px;
     opacity: 0.9;
     color: #ffffff;
-    background-image: url("image/img/bg/bg1.png");
+    
     
 }
 
@@ -40,7 +41,7 @@ body {
     background-color: #fff;
     display: block;
     margin-top: -17px;
-    margin-left: -5px;
+    margin-left: 1px;
     
 }
 
