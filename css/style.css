@@ -102,6 +102,51 @@ nav ul .btn:hover {
     align-items: center;
 }
 
+/***** O que é eAi? *****/
+
+.card-eai {
+    color: #2A438C;
+    
+}
+
+.card-eai h2 {
+    margin: 3rem 0;
+    font-weight: 700;
+    text-align: right;
+}
+
+.card-eai h5 {
+    margin: 3rem 0;
+    font-weight: 400;
+    text-align: right;
+}
+
+.robo {
+    padding: 20px;
+    margin-top: -20%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/***** Video *****/
+
+.video{
+    margin-top: -10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+}
+.robo2 {
+    padding: 20px;
+    margin-top: -10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content:right;
+    align-items:center;
+}
+
 
 
 @media only screen and (max-width: 601px) {
@@ -120,7 +165,23 @@ nav ul .btn:hover {
     .card-apresentacao h5 {
         font-size: 1.3rem;
     }
+
+    /***** O que é eAi? *****/
+
+    #serviços{
+    padding-top: 0%;
+    }
+    .card-eai h2 {
+        font-size: 2.5rem;
+    }
+    
+    .card-eai h5 {
+        font-size: 1.3rem;
+    }
+
 }
+
+
 
 @media only screen and (min-width: 602px) and (max-width: 991px) {
     .bloco {
@@ -138,4 +199,17 @@ nav ul .btn:hover {
     .card-apresentacao h5 {
         font-size: 1.5rem;
     }
-}
+
+    /***** O que é eAi? *****/
+
+    #serviços{
+        padding-top: 0%;
+            }
+    .card-eai h2 {
+        font-size: 3rem;
+            }
+            
+    .card-eai h5 {
+        font-size: 1.5rem;
+            }
+}    
