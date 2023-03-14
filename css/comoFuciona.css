@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+#cardsclienteparceiro{
+    background: linear-gradient(360deg, #2A438C 5.76%, rgba(42, 67, 140, 0) 100%);
+    padding-top: 5px;
+}
+
+/***** fuciona *****/
+#fuciona {
+    
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #434343;
+
+    font-size: 17px;
+}
+
+#fuciona h1 {
+	font-size: 52px;
+    margin: 3rem 0;
+    margin-top: 80px;
+    font-weight: 500;
+	color:#2A438C;
+}
+
+
+main.cards {
+    display: flex;
+    padding: 32px;
+}
+
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.719);
+    padding: 1.5rem 1.7rem;
+    border-radius: 10px;
+    max-height: 468px;
+    margin-left: 0px;
+}
+
+
+
+main.cards section.card:first-child {
+    margin-left: 0;
+}
+
+main.cards section.card .icon {
+    width: 64px;
+    height: 75px;
+}
+
+main.cards section.card img {
+    width: 100%;
+}
+
+main.cards section.card span {
+    font-size: 20px;
+    margin: 16px 0;
+}
+main.cards section.card span{
+    font-weight: 500;
+}
+
+main.cards section.card span p.paragafo{
+    margin-top: 60%;
+
+}
+
+main.cards section.card button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16px 0;
+}
+
+main.cards section.card.contact button {
+    background: linear-gradient(to right, #2e15cc, #c5bef1);
+}
+
+
+
+main.cards section.card.contact {
+    box-shadow: 20px 20px 50px -30px #fff;
+}
