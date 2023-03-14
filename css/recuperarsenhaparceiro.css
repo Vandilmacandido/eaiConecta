@@ -12,19 +12,19 @@
 p {
     cursor: pointer;
     font-weight: 600;
-    color: slateblue;
+    color: #1c0583;
     
 }
 
 h1 {
     font-size: 1.8em;
-    color: slateblue;
+    color: #1c0583;
     padding: 0px 0px 35px 15px;
 }
 
 h2 {
     font-size: 1.4em;
-    color: slateblue;
+    color: #1c0583;
 }
 
 input {
@@ -44,7 +44,7 @@ button {
     height: 35px;
     border: none;
     border-radius: 5px;
-    background: slateblue;
+    background: #1c0583;
 }
 
 body {
