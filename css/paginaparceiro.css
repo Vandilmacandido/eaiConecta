@@ -90,6 +90,7 @@ nav ul .btn:hover {
     margin: 3rem 0;
     font-weight: 700;
     margin-top: 15px;
+    font-size: 80px;
 }
 
 .card-apresentacao h5 {
@@ -133,6 +134,7 @@ nav ul .btn:hover {
     font-weight: 500;
 	color:#fff;
     font-size: 40px;
+    margin-block-end: 10px;
 }
 
 main.cards {
@@ -227,6 +229,7 @@ footer .redes-sociais {
 
 .card-eai {
     color: #2A438C;
+    margin-top: 90px;
     
 }
 
@@ -237,14 +240,15 @@ footer .redes-sociais {
 }
 
 .card-eai h5 {
-    margin: 3rem 0;
+    margin: 4rem 10;
     font-weight: 400;
-    text-align: right;
+    text-align: left;
+    
 }
 
 .robo {
     padding: 20px;
-    margin-top: -20%;
+    margin-top: 0%;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
