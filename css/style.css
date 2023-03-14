@@ -17,11 +17,18 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.bloco {
+.bloco-home {
     width: min(1920px, 100%);
     margin-inline: auto;
     padding-inline: 24px;
     height: 80vh;
+}
+
+.bloco {
+    width: min(1920px, 100%);
+    margin-inline: auto;
+    padding-inline: 24px;
+    height: 100%;
 }
 
 /***** MENU *****/
@@ -139,7 +146,7 @@ main.cards section.card {
     padding: 1.5rem 1.7rem;
     border-radius: 10px;
     max-height: 468px;
-    margin-left: 32px;
+    margin-left: 0px;
 }
 
 main.cards section.card:first-child {
@@ -212,7 +219,7 @@ footer .redes-sociais {
     justify-content: center;
 	gap: 30px;
 }
-=======
+
 /***** O que é eAi? *****/
 
 .card-eai {
@@ -244,10 +251,13 @@ footer .redes-sociais {
 /***** Video *****/
 
 .video{
-    margin-top: -10%;
-    box-sizing: border-box;
     display: flex;
-    justify-content: right;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.video img {
+    width: 36%;
 }
 .robo2 {
     padding: 20px;
@@ -314,14 +324,31 @@ footer .copyright {
         font-size: 1.3rem;
     }
 	
+    .robo img {
+        display: none;
+    }
+
+    .video{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .video img {
+        display: none;
+    }
 	
-	 main.cards {
+    /***** PRODUTOS *****/
+
+	main.cards {
         flex-direction: column;
     }
 
     main.cards section.card {
         margin-left: 0;
         margin-bottom: 32px;
+		margin-left: 0px;
     }
 
     main.cards section.card:last-child {
@@ -365,8 +392,36 @@ footer .copyright {
     .card-eai h5 {
         font-size: 1.5rem;
             }
-			
-	 main.cards {
+    .video img {
+        display: none;
+    }
+
+    /***** PRODUTOS *****/		
+	
+    #produto {
+		
+		height: max-content;
+	}
+	
+	main.cards {
+        flex-direction: column;
+    }
+
+    main.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+		margin-left: 0px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    main.cards section.card button {
+        font-size: 70%;
+    }
+	
+	main.cards {
         flex-direction: column;
     }
 
