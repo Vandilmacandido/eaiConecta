@@ -1,61 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/cadastrocliente.css">
-    <title>Cadastro</title>
-    
+    <title>Cadastro Cliente</title>
 </head>
 
 <body>
-    <div class="container" >
-        <a class="links" id="paracadastro"></a>
-        <a class="links" id="paralogin"></a>
-        
-        <div class="content">      
-          
-          
-    
-          <!--FORMULÁRIO DE CADASTRO-->
-          <div id="cadastro">
-            <form method="post" action=""> 
-              <h1>Cadastro Cliente</h1> 
-              <section class="card shop">
-                <div class="icon">
-                    <img src="image/img/ClienteParceiro/cliente.png" alt="Cliente" width="90"  height="90">
-                </div>
-              </section>
-                
-              
-              <p> 
-                <label for="nome_cad">Seu nome</label>
-                <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="Seu Nome" />
-              </p>
-              
-              <p> 
-                <label for="email_cad">Seu e-mail</label>
-                <input id="email_cad" name="email_cad" required="required" type="email" placeholder="digite@email"/> 
-              </p>
-              
-              <p> 
-                <label for="senha_cad">Sua senha</label>
-                <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="1234"/>
-              </p>
-              
-              <p> 
-                <input type="submit" value="Cadastrar"/> 
-              </p>
-              
-              <p class="link">  
-                Já tem conta?
-                <a href="loginCliente.html"> Ir para Login </a>
-              </p>
-            </form>
-          </div>
+    <div class="box">
+        <div class="img-box">
+            <img src="image/img/cadastro/header-blog-robos-trabalho-vantagens-inbot.png">
         </div>
-      </div> 
+        <div class="form-box">
+            <h2>Cadastro Cliente</h2>
+            <p> Já é um membro? <a href="loginCliente.html"> -> Login </a> </p>
+            <form action="#">
+                <div class="input-group">
+                    <label for="nome"> Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Digite o seu nome completo" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Digite o seu email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" placeholder="Digite o seu telefone" required>
+                </div>
+
+                <div class="input-group w50">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                </div>
+
+                <div class="input-group w50">
+                    <label for="Confirmarsenha">Confirmar Senha</label>
+                    <input type="password" id="Confirmarsenha" placeholder="Confirme a senha" required>
+                </div>
+
+                <div class="input-group">
+                    <button>Cadastrar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
 </body>
 </html>

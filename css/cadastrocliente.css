@@ -1,177 +1,115 @@
-/* CSS reset */
-*, *:before, *:after { 
-        margin:0;
-    padding:0;
-    font-family: Arial,sans-serif;
-  }
-  
-  body{
-    
-    margin-top: 60px;
-  }
-  
-  a{
-    text-decoration: none;
-    
-  }
-  
-  /* esconde as ancoras da tela */
-  a.links{
-    display: none;
-    
-  }
-  
-  /* content que contem os formulários */
-  .content{
-    
-    width: 500px;
-    margin: 0px auto;
-    position: relative; 
-    
-  }
-  
-  /* formatando o cabeçalho dos formulários */
-  h1{
-    font-size: 48px;
-    color: #ffffff;
-    padding: 10px 0;
-    font-family: Arial,sans-serif;
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: 30px;
-  }
-  h1:after{
-    content: ' ';
-    display: block;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: linear-gradient(180deg, #2A438C 5.76%, rgba(42, 67, 140, 0) 100%);
+    padding-top: 05px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+.w50{
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+}
+.box{
+    display: flex;
+    width: 930px;
+}
+.img-box{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px  0 0 20px;
+}
+.img-box img{
     width: 100%;
-    height: 2px;
-    margin-top: 10px;
-    
-  }
-  
-  p{
-    margin-bottom:15px;
-  }
-  p:first-child{
-    margin: 0px;
-  }
-  label{
-    color: #ffffff;
-    position: relative;
-  }
-  
-  /**** advanced input styling ****/
-  /* placeholder */
-  ::-webkit-input-placeholder  {
-    color: #bebcbc; 
-    font-style: italic;
-  }
-  input:-moz-placeholder,
-  textarea:-moz-placeholder{
-    color: #bebcbc;
-    font-style: italic;
-  } 
-  input {
-    outline: none;
-  }
-  
-  input:not([type="checkbox"]){
-    width: 95%;
-    margin-top: 4px;
-    padding: 10px;  
-    border: 1px solid #b2b2b2;
-    
-    -webkit-border-radius: 20px;
-    border-radius: 20px;
-    
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-    
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-  }
-  
-  /*estilo do botão submit */
-  input[type="submit"]{
-    width: 100%!important;
-    cursor: pointer;  
-    background: #f1df38;
-    padding: 8px 5px;
-    color: #000000;
-    font-size: 20px;  
-    border: 0px solid #fff; 
-    margin-bottom: 10px;  
-    text-shadow: 0 1px 1px #333;
-    
-    -webkit-border-radius: 20px;
-    border-radius: 20px;
-    
-    transition: all 0.2s linear;
-  }
-  input[type="submit"]:hover{
-    background: #75fd5a;
-  }
-  
-  /*marcando os links para mudar de um formulário para outro */
-  .link{
-    position: absolute;
-    background: #2A438C;
-    color: #ffffff;
-    left: 0px;
-    height: 20px;
-    width: 440px;
-    padding: 17px 30px 20px 30px;
-    font-size: 16px;
-    text-align: right;
-    border-top: 1px solid #dbe5e8;
-  
-    -webkit-border-radius: 0 0  5px 5px;
-    border-radius: 0 0  5px 5px;
-    
-  }
-  
-  .link a {
+}
+.form-box{
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(40px);
+    padding: 30px 40px;
+    width: 50%;
+    border-radius: 0 20px 20px 0;
+}
+.form-box h2{
+    font-size: 30px;
+}
+.form-box p{
     font-weight: bold;
-    background: #f7f8f1;
-    padding: 6px;
-    color: rgb(0, 0, 0);
-    margin-left: 10px;
-    border: 1px solid #cbd518;
-  
-    -webkit-border-radius: 4px;
-    border-radius: 4px;  
-  
-    -webkit-transition: all 0.4s linear;
-    transition: all 0.4s  linear;
-  }
-  .link a:hover {
-    color: #000000;
-    background: #f7f7f7;
-    border: 1px solid #4ab3c6;
-  }
-  
-  /* estilos para para ambos os formulários */
-  #cadastro, 
-  #login{
-    position: absolute;
-    top: 0px;
-    width: 88%; 
-    padding: 18px 6% 60px 6%;
-    margin: 0 0 35px 0;
-    background: #2A438C;
-    border: 1px solid rgba(252, 252, 252, 0.8);
-    
-    -webkit-box-shadow: 20px;
+    color: #3D3D3D;
+}
+.form-box p a{
+    color: #0c4f7c;
+    text-decoration: none;
+    font-size: 20px;
+}
+.form-box form{
+    margin: 20px 0;
+}
+form .input-group{
+    margin-bottom: 15px;
+}
+form .input-group label{
+    color: #3D3D3D;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+form .input-group input{
+    width: 100%;
+    height: 47px;
+    background-color: rgba(255, 255, 255, 0.32);
     border-radius: 20px;
-    
-    -webkit-animation-duration: 0.5s;
-    -webkit-animation-timing-function: ease;
-    -webkit-animation-fill-mode: both;
-  
-    animation-duration: 0.5s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-  }
-
-  
-  
+    outline: none;
+    border: 2px solid transparent;
+    padding: 15px;
+    font-size: 15px;
+    color: #616161;
+    transition: all 0.4s ease;
+}
+form .input-group input:focus{
+    border-color: #0c4f7c;
+}
+form .input-group button{
+    width: 100%;
+    height: 47px;
+    background: #0c4f7c;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+@media (max-width:930px) {
+    .img-box{
+        display: none;
+    }
+    .box{
+        width: 700px;
+    }
+    .form-box{
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+@media (max-width:500px) {
+    .w50{
+        width: 100%;
+        padding: 0;
+    }
+}
