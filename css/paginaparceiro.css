@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+.bloco-home {
+    width: min(1920px, 100%);
+    margin-inline: auto;
+    padding-inline: 24px;
+    height: 80vh;
+}
+
+.bloco {
+    width: min(1920px, 100%);
+    margin-inline: auto;
+    padding-inline: 24px;
+    height: 100%;
+}
+
+/***** MENU *****/
+
+nav {
+    background-color: #2A438C;
+    height: 70px;
+}
+
+nav .logoMenu {
+    margin-left: 30px;
+}
+nav ul .btn {
+    background-color: #F23E16;
+    border-radius: 30px;
+}
+
+nav ul .btn:hover {
+    background-color: #da4828;
+}
+
+.side-nav {
+    background-color: #2A438C;
+}
+
+.side-nav li>a {
+    color: #fff;
+}
+
+.side-nav .btn {
+    background-color: #F23E16;
+    border-radius: 30px;
+}
+
+.side-nav li>a.btn:hover {
+    background-color: #da4828;
+}
+
+.side-nav .dropdown-content {
+    background-color: #2A438C;
+}
+
+.side-nav .dropdown-content li:hover {
+    background-color: #da4828;
+}
+
+/***** HOME *****/
+#home {
+    background: linear-gradient(180deg, #2A438C 5.76%, rgba(42, 67, 140, 0) 100%);
+    padding-top: 70px;
+}
+
+.card-apresentacao {
+    color: #fff;
+    
+}
+
+.card-apresentacao h1 {
+    margin: 3rem 0;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.card-apresentacao h5 {
+    margin: 3rem 0;
+    font-weight: 400;
+}
+
+.card-apresentacao .btn{
+    background-color: #F23E16;
+    border-radius: 30px;
+}
+.card-robo {
+    padding: 17px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/***** PRODUTO *****/
+
+#produto {
+	background: linear-gradient(180deg, #2A438C 5.76%, rgba(42, 67, 140, 0) 100%);
+    padding-top: 5px;
+    
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #434343;
+
+    font-size: 17px;
+}
+
+#produto h1 {
+    margin: 3rem 0;
+    margin-top: 80px;
+    font-weight: 500;
+	color:#fff;
+    font-size: 40px;
+}
+
+main.cards {
+    display: flex;
+    padding: 32px;
+}
+
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    padding: 1.5rem 1.2rem;
+    border-radius: 10px;
+    max-height: 468px;
+    margin-left: 0px;
+}
+
+main.cards section.card:first-child {
+    margin-left: 0;
+}
+
+main.cards section.card .icon {
+    width: 64px;
+    height: 75px;
+}
+
+main.cards section.card img {
+    width: 100%;
+}
+
+main.cards section.card h3 {
+    font-size: 100%;
+    margin: 16px 0;
+}
+
+main.cards section.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px;
+}
+
+main.cards section.card button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16px 0;
+}
+
+main.cards section.card.contact button {
+    background: linear-gradient(to right, #ec2f2f, #FFC7D9);
+}
+main.cards section.card.shop button {
+    background: linear-gradient(to right, #3E8AFF, #BBDEFF);
+}
+main.cards section.card.about button {
+    background: linear-gradient(to right, #2e15cc, #c5bef1);
+}
+
+main.cards section.card.contact {
+    box-shadow: 20px 20px 50px -30px #ea4a4a;
+}
+main.cards section.card.shop {
+    box-shadow: 20px 20px 50px -30px #3317a4;
+}
+main.cards section.card.about {
+    box-shadow: 20px 20px 50px -30px #3415e2;
+}
+
+/***** FOOTER *****/
+
+.page-footer {
+    background-color: #2A438C;
+}
+
+footer .redes-sociais {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	gap: 30px;
+}
+
+/***** O que é eAi? *****/
+
+.card-eai {
+    color: #2A438C;
+    
+}
+
+.card-eai h2 {
+    margin: 3rem 0;
+    font-weight: 700;
+    text-align: right;
+}
+
+.card-eai h5 {
+    margin: 3rem 0;
+    font-weight: 400;
+    text-align: right;
+}
+
+.robo {
+    padding: 20px;
+    margin-top: -20%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/***** Video *****/
+
+.video{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.video img {
+    width: 36%;
+}
+.robo2 {
+    padding: 20px;
+    margin-top: -10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content:right;
+    align-items:center;
+}
+
+footer .redes-sociais ul {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+footer .redes-sociais ul a {
+    font-size: 1.5rem;
+}
+
+footer .link-app img {
+    width:35%;
+}
+
+footer .copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width: 601px) {
+    .bloco {
+        height: 100%;
+    }
+
+    /***** HOME *****/
+    #home {
+        padding-top: 0;
+    }
+    .card-apresentacao h1 {
+        font-size: 2.5rem;
+    }
+    
+    .card-apresentacao h5 {
+        font-size: 1.3rem;
+    }
+	
+	#produto {
+		
+		height: max-content;
+	}
+
+    /***** O que é eAi? *****/
+
+    #serviços{
+    padding-top: 0%;
+    }
+    .card-eai h2 {
+        font-size: 2.5rem;
+    }
+    
+    .card-eai h5 {
+        font-size: 1.3rem;
+    }
+	
+    .robo img {
+        display: none;
+    }
+
+    .video{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .video img {
+        display: none;
+    }
+	
+    /***** PRODUTOS *****/
+
+	main.cards {
+        flex-direction: column;
+    }
+
+    main.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+		margin-left: 0px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    main.cards section.card button {
+        font-size: 70%;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 602px) and (max-width: 991px) {
+    .bloco {
+        height: 100%;
+    }
+
+    /***** HOME *****/
+    #home {
+        padding-top: 0;
+    }
+    .card-apresentacao h1 {
+        font-size: 3rem;
+    }
+    
+    .card-apresentacao h5 {
+        font-size: 1.5rem;
+    }
+
+    /***** O que é eAi? *****/
+
+    #serviços{
+        padding-top: 0%;
+            }
+    .card-eai h2 {
+        font-size: 3rem;
+            }
+            
+    .card-eai h5 {
+        font-size: 1.5rem;
+            }
+    .video img {
+        display: none;
+    }
+
+    /***** PRODUTOS *****/		
+	
+    #produto {
+		
+		height: max-content;
+	}
+	
+	main.cards {
+        flex-direction: column;
+    }
+
+    main.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+		margin-left: 0px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    main.cards section.card button {
+        font-size: 70%;
+    }
+	
+	main.cards {
+        flex-direction: column;
+    }
+
+    main.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    main.cards section.card button {
+        font-size: 70%;
+    }
+}    
