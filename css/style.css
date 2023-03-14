@@ -57,7 +57,9 @@ nav ul .btn:hover {
 .side-nav li>a {
     color: #fff;
 }
-
+#dropdown2 li>a {
+	color:#F23E16;
+}
 .side-nav .btn {
     background-color: #F23E16;
     border-radius: 30px;
@@ -87,6 +89,7 @@ nav ul .btn:hover {
 }
 
 .card-apresentacao h1 {
+	font-size: 52px;
     margin: 3rem 0;
     font-weight: 700;
 }
@@ -127,6 +130,7 @@ nav ul .btn:hover {
 }
 
 #produto h1 {
+	font-size: 52px;
     margin: 3rem 0;
     margin-top: 80px;
     font-weight: 500;
@@ -164,7 +168,7 @@ main.cards section.card img {
 }
 
 main.cards section.card h3 {
-    font-size: 100%;
+    font-size: 20px;
     margin: 16px 0;
 }
 
@@ -207,19 +211,6 @@ main.cards section.card.about {
     box-shadow: 20px 20px 50px -30px #3415e2;
 }
 
-/***** FOOTER *****/
-
-.page-footer {
-    background-color: #2A438C;
-}
-
-footer .redes-sociais {
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-	gap: 30px;
-}
 
 /***** O que é eAi? *****/
 
@@ -229,6 +220,7 @@ footer .redes-sociais {
 }
 
 .card-eai h2 {
+	font-size: 52px;
     margin: 3rem 0;
     font-weight: 700;
     text-align: right;
@@ -269,6 +261,26 @@ footer .redes-sociais {
     align-items:center;
 }
 
+/***** FOOTER *****/
+
+.page-footer {
+    background-color: #2A438C;
+}
+
+footer .endereco {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+footer .redes-sociais {
+	display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+	gap: 30px;
+}
+
 footer .redes-sociais ul {
 	display: flex;
     justify-content: center;
@@ -277,13 +289,28 @@ footer .redes-sociais ul {
 }
 
 footer .redes-sociais ul a {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
-footer .link-app img {
-    width:35%;
+footer .app {
+	flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
 }
 
+footer .link-app ul {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 50px;
+}
+	
+footer .link-app ul li a{
+	font-size: 2rem;
+}
+	
 footer .copyright {
     display: flex;
     justify-content: space-between;
@@ -300,12 +327,18 @@ footer .copyright {
         padding-top: 0;
     }
     .card-apresentacao h1 {
-        font-size: 2.5rem;
+        font-size: 25px;
     }
     
     .card-apresentacao h5 {
-        font-size: 1.3rem;
+        font-size: 18px;
     }
+	
+	/***** PRODUTO *****/
+	
+	#produto h1 {
+		font-size: 25px;
+	}
 	
 	#produto {
 		
@@ -359,6 +392,39 @@ footer .copyright {
     main.cards section.card button {
         font-size: 70%;
     }
+	
+	/***** FOOTER *****/
+	
+	footer .redes-sociais {
+	display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+	gap: 20px;
+	margin: 15px;
+	}
+	
+	footer .redes-sociais ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+	}
+	
+	footer .link-app ul {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		gap: 50px;
+	}
+	
+	footer .link-app ul li{
+		font-size: 3rem;
+	}
+	
+	footer .copyright {
+		font-size: 10px;
+	}
 
 }
 
@@ -379,6 +445,7 @@ footer .copyright {
     
     .card-apresentacao h5 {
         font-size: 1.5rem;
+		color: #2A438C;
     }
 
     /***** O que é eAi? *****/
@@ -438,4 +505,13 @@ footer .copyright {
     main.cards section.card button {
         font-size: 70%;
     }
+	
+	/***** FOOTER *****/	
+	
+	footer .redes-sociais ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+	}
 }    
