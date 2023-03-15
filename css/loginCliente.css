@@ -43,7 +43,9 @@ button {
     border: none;
     border-radius: 5px;
     background: #2A438C;
+    
 }
+
 
 body {
     background: linear-gradient(180deg, #2A438C 5.76%, rgba(42, 67, 140, 0) 100%);

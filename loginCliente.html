@@ -33,14 +33,14 @@
 
             <div class="box">
                 <h2>Ambiente do Cliente</h2>
-                <input type="text" name="username" id="username" placeholder="usuário">
-                <input type="password" name="password" id="password" placeholder="senha">
+                <input type="email" name="email" id="email" onchange="validateFields()" placeholder="Digite seu E-mail">
+                <input type="password" name="password" id="password" onchange="validateFields" placeholder="senha">
                 
                 <a href="recuperarsenhacliente.html">
                     <p>Esqueceu a sua senha?</p>
                 </a>
 
-                <button>Login</button>
+                <button type="button" class="solid" id="login-button" disabled="true">Entrar</button>
                 
                 <a href="cadastrocliente.html">
                     <p>Criar uma conta</p>
@@ -55,5 +55,7 @@
             </div>
         </div>
     </div>
+
+    <script src="js/logincliente.js"></script>
 </body>
 </html>
