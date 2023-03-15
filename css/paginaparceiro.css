@@ -117,7 +117,7 @@ nav ul .btn:hover {
 /***** PRODUTO *****/
 
 #produto {
-	background: linear-gradient(180deg,#ff9078 0%, #fd613e 50%, #ec431d 100%);
+	background: linear-gradient(180deg,#ec431d 0%, #fd613e 50%, #ff9078 100%);
     padding-top: 70px;
     
     height: 100vh;
@@ -218,8 +218,7 @@ main.cards section.card.about {
 /* PARCEIRO */
 
 #parceiro {
-    background: linear-gradient(180deg,#ff9078 0%, #fd613e 50%, #ec431d 100%);
-    padding-top: 70px;
+    
 }
 /***** O que é eAi? *****/
 
