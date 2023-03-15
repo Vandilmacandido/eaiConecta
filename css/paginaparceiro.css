@@ -21,7 +21,7 @@ body {
     width: min(1920px, 100%);
     margin-inline: auto;
     padding-inline: 24px;
-    height: 80vh;
+    height: 82vh;
 }
 
 .bloco {
@@ -34,7 +34,7 @@ body {
 /***** MENU *****/
 
 nav {
-    background-color: #08480d;
+    background-color: #fd613e;
     height: 70px;
 }
 
@@ -42,16 +42,16 @@ nav .logoMenu {
     margin-left: 30px;
 }
 nav ul .btn {
-    background-color: #F23E16;
+    background-color: #2A438C;
     border-radius: 30px;
 }
 
 nav ul .btn:hover {
-    background-color: #da4828;
+    background-color: #3e5088;
 }
 
 .side-nav {
-    background-color: #2A438C;
+    background-color: #fd613e;
 }
 
 .side-nav li>a {
@@ -59,12 +59,12 @@ nav ul .btn:hover {
 }
 
 .side-nav .btn {
-    background-color: #F23E16;
+    background-color: #2A438C;
     border-radius: 30px;
 }
 
 .side-nav li>a.btn:hover {
-    background-color: #da4828;
+    background-color: #2A438C;
 }
 
 .side-nav .dropdown-content {
@@ -72,12 +72,12 @@ nav ul .btn:hover {
 }
 
 .side-nav .dropdown-content li:hover {
-    background-color: #da4828;
+    background-color: #2A438C;
 }
 
 /***** HOME *****/
 #home {
-    background: linear-gradient(180deg, #08480d 5.76%, rgba(42, 67, 140, 0) 100%);
+    background: linear-gradient(180deg,#ff9078 0%, #fd613e 50%, #ec431d 100%);
     padding-top: 70px;
 }
 
@@ -99,7 +99,7 @@ nav ul .btn:hover {
 }
 
 .card-apresentacao .btn{
-    background-color: #F23E16;
+    background-color: #2A438C;
     border-radius: 30px;
 }
 .card-robo {
@@ -113,7 +113,7 @@ nav ul .btn:hover {
 /***** PRODUTO *****/
 
 #produto {
-	background: linear-gradient(180deg, #08480d 5.76%, rgba(42, 67, 140, 0) 100%);
+	background: linear-gradient(180deg, #3e41fd 5.76%, rgba(42, 67, 140, 0) 100%);
     padding-top: 5px;
     
     height: 100vh;
@@ -211,24 +211,15 @@ main.cards section.card.about {
     box-shadow: 20px 20px 50px -30px #3415e2;
 }
 
-/***** FOOTER *****/
+/* PARCEIRO */
 
-.page-footer {
-    background-color: #08480d;
+#parceiro {
+    background: linear-gradient(180deg,#ff9078 0%, #fd613e 50%, #ec431d0f 100%);
 }
-
-footer .redes-sociais {
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-	gap: 30px;
-}
-
 /***** O que é eAi? *****/
 
 .card-eai {
-    color: #2A438C;
+    color: #ffffff;
     margin-top: 90px;
     
 }
@@ -275,6 +266,26 @@ footer .redes-sociais {
     align-items:center;
 }
 
+/***** FOOTER *****/
+
+.page-footer {
+    background-color: #fd613e;
+}
+
+footer .endereco {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+footer .redes-sociais {
+	display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+	gap: 30px;
+}
+
 footer .redes-sociais ul {
 	display: flex;
     justify-content: center;
@@ -283,13 +294,28 @@ footer .redes-sociais ul {
 }
 
 footer .redes-sociais ul a {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
-footer .link-app img {
-    width:35%;
+footer .app {
+	flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
 }
 
+footer .link-app ul {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 50px;
+}
+	
+footer .link-app ul li a{
+	font-size: 2rem;
+}
+	
 footer .copyright {
     display: flex;
     justify-content: space-between;
@@ -366,6 +392,38 @@ footer .copyright {
         font-size: 70%;
     }
 
+    /***** FOOTER *****/
+	
+	footer .redes-sociais {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 20px;
+        margin: 15px;
+	}
+	
+	footer .redes-sociais ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+	}
+	
+	footer .link-app ul {
+	    display: flex;
+		justify-content: start;
+		align-items: center;
+		gap: 50px;
+	}
+	
+	footer .link-app ul li{
+		font-size: 3rem;
+	}
+	
+	footer .copyright {
+		font-size: 10px;
+	}
 }
 
 
@@ -444,4 +502,13 @@ footer .copyright {
     main.cards section.card button {
         font-size: 70%;
     }
+
+    /***** FOOTER *****/	
+	
+	footer .redes-sociais ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+	}
 }    
