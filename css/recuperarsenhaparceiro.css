@@ -12,19 +12,19 @@
 p {
     cursor: pointer;
     font-weight: 600;
-    color: #08480d;
+    color: #ec431d;
     
 }
 
 h1 {
     font-size: 1.8em;
-    color: #08480d;
+    color: #ec431d;
     padding: 0px 0px 35px 15px;
 }
 
 h2 {
     font-size: 1.4em;
-    color: #08480d;
+    color: #ec431d;
 }
 
 input {
@@ -44,11 +44,11 @@ button {
     height: 35px;
     border: none;
     border-radius: 5px;
-    background: #08480d;
+    background: #ec431d;
 }
 
 body {
-    background: linear-gradient(180deg, #08480d 5.76%, rgba(42, 67, 140, 0) 100%);
+    background: linear-gradient(180deg, #ec431d 5.76%, rgba(42, 67, 140, 0) 100%);
     padding-top: 05px;
     width: 100%;
     height: 100vh;
@@ -67,7 +67,7 @@ body {
         border-radius: 10px;
         -webkit-box-shadow: 0px 0px 6px -1px #000000; 
         box-shadow: 0px 0px 6px -1px #000000;
-        background: #08480d;
+        background: #ec431d;
 
         display: flex;
         align-items: center;
@@ -78,7 +78,7 @@ body {
             height: 520px;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
-            background: #08480d;
+            background: #ec431d;
 
             display: none;
             flex-direction: column;

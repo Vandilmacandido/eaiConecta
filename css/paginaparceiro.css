@@ -21,7 +21,7 @@ body {
     width: min(1920px, 100%);
     margin-inline: auto;
     padding-inline: 24px;
-    height: 82vh;
+    height: 120vh;
 }
 
 .bloco {
@@ -113,7 +113,7 @@ nav ul .btn:hover {
 /***** PRODUTO *****/
 
 #produto {
-	background: linear-gradient(180deg,#ff9078 0%, #fd613e 50%, #ec431d 100%);
+	background: linear-gradient(180deg, #ec431d 5.76%, rgba(42, 67, 140, 0) 100%);
     padding-top: 70px;
     
     height: 100vh;
@@ -214,12 +214,12 @@ main.cards section.card.about {
 /* PARCEIRO */
 
 #parceiro {
-    background: linear-gradient(180deg,#ff9078 0%, #fd613e 50%, #ec431d0f 100%);
+    
 }
 /***** O que é eAi? *****/
 
 .card-eai {
-    color: #ffffff;
+    color: #ec431d;
     margin-top: 90px;
     
 }

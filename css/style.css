@@ -84,7 +84,7 @@ nav ul .btn:hover {
 
 /***** HOME *****/
 #home {
-    background: linear-gradient(180deg, #2A438C 5.76%, rgba(42, 67, 140, 0) 100%);
+    background: linear-gradient(180deg,#a2aed4 0%, #5b7ee6 50%, #2A438C 100%);
     padding-top: 70px;
 }
 
@@ -137,7 +137,7 @@ nav ul .btn:hover {
 #produto h1 {
 	font-size: 52px;
     margin: 3rem 0;
-    margin-top: 80px;
+    margin-top: 100px;
     font-weight: 500;
 	color:#fff;
 }
@@ -229,17 +229,19 @@ main.cards section.card.about {
     margin: 3rem 0;
     font-weight: 700;
     text-align: right;
+    margin-top: 20%;
 }
 
 .card-eai h5 {
     margin: 3rem 0;
     font-weight: 400;
     text-align: right;
+    margin-top: 05%;
 }
 
 .robo {
     padding: 20px;
-    margin-top: -20%;
+    margin-top: 0%;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -248,14 +250,19 @@ main.cards section.card.about {
 
 /***** Video *****/
 
+
+
 .video{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    
+    
 }
 
 .video img {
     width: 36%;
+    margin-top: 05%;
 }
 .robo2 {
     padding: 20px;
