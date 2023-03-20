@@ -12,11 +12,6 @@ body {
     height: 100%;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-
 body {
     
     font-family: 'Roboto', sans-serif;
@@ -30,7 +25,7 @@ body {
     width: min(1920px, 100%);
     margin-inline: auto;
     padding-inline: 24px;
-    height: 82vh;
+    height: 100%;
 }
 
 .bloco {
@@ -43,7 +38,7 @@ body {
 /***** MENU *****/
 
 nav {
-    background-color: #2A438C;
+    background-color: #fd613e;
     height: 70px;
 }
 
@@ -51,31 +46,29 @@ nav .logoMenu {
     margin-left: 30px;
 }
 nav ul .btn {
-    background-color: #F23E16;
+    background-color: #2A438C;
     border-radius: 30px;
 }
 
 nav ul .btn:hover {
-    background-color: #da4828;
+    background-color: #3e5088;
 }
 
 .side-nav {
-    background-color: #2A438C;
+    background-color: #fd613e;
 }
 
 .side-nav li>a {
     color: #fff;
 }
-#dropdown2 li>a {
-	color:#F23E16;
-}
+
 .side-nav .btn {
-    background-color: #F23E16;
+    background-color: #2A438C;
     border-radius: 30px;
 }
 
 .side-nav li>a.btn:hover {
-    background-color: #da4828;
+    background-color: #2A438C;
 }
 
 .side-nav .dropdown-content {
@@ -83,13 +76,14 @@ nav ul .btn:hover {
 }
 
 .side-nav .dropdown-content li:hover {
-    background-color: #da4828;
+    background-color: #2A438C;
 }
 
 /***** HOME *****/
 #home {
-    background: linear-gradient(180deg,#a2aed4 0%, #5b7ee6 50%, #2A438C 100%);
+    background: linear-gradient(180deg,#ff9078 0%, #fd613e 50%, #ec431d 100%);
     padding-top: 70px;
+    
 }
 
 .card-apresentacao {
@@ -98,9 +92,10 @@ nav ul .btn:hover {
 }
 
 .card-apresentacao h1 {
-	font-size: 52px;
     margin: 3rem 0;
     font-weight: 700;
+    margin-top: 15px;
+    font-size: 80px;
 }
 
 .card-apresentacao h5 {
@@ -109,7 +104,7 @@ nav ul .btn:hover {
 }
 
 .card-apresentacao .btn{
-    background-color: #F23E16;
+    background-color: #2A438C;
     border-radius: 30px;
 }
 .card-robo {
@@ -123,8 +118,8 @@ nav ul .btn:hover {
 /***** PRODUTO *****/
 
 #produto {
-	background: linear-gradient(180deg, #2A438C 5.76%, rgba(42, 67, 140, 0) 100%);
-    padding-top: 5px;
+	background: linear-gradient(180deg,#ec431d 0%, #fd613e 50%, #ff9078 100%);
+    padding-top: 70px;
     
     height: 100vh;
     width: 100%;
@@ -139,11 +134,12 @@ nav ul .btn:hover {
 }
 
 #produto h1 {
-	font-size: 52px;
     margin: 3rem 0;
-    margin-top: 100px;
+    margin-top: 80px;
     font-weight: 500;
 	color:#fff;
+    font-size: 40px;
+    margin-block-end: 10px;
 }
 
 main.cards {
@@ -157,7 +153,7 @@ main.cards section.card {
     align-items: center;
     text-align: center;
     background: white;
-    padding: 1.5rem 1.7rem;
+    padding: 1.5rem 1.2rem;
     border-radius: 10px;
     max-height: 468px;
     margin-left: 0px;
@@ -168,8 +164,8 @@ main.cards section.card:first-child {
 }
 
 main.cards section.card .icon {
-    width: 64px;
-    height: 75px;
+    width: 230px;
+    height: 130px;
 }
 
 main.cards section.card img {
@@ -177,7 +173,7 @@ main.cards section.card img {
 }
 
 main.cards section.card h3 {
-    font-size: 20px;
+    font-size: 100%;
     margin: 16px 0;
 }
 
@@ -201,13 +197,13 @@ main.cards section.card button {
 }
 
 main.cards section.card.contact button {
-    background: linear-gradient(to right, #ec2f2f, #FFC7D9);
+    background: linear-gradient(to right, #000000, #1105bb);
 }
 main.cards section.card.shop button {
-    background: linear-gradient(to right, #3E8AFF, #BBDEFF);
+    background: linear-gradient(to right, #000000, #1105bb);
 }
 main.cards section.card.about button {
-    background: linear-gradient(to right, #2e15cc, #c5bef1);
+    background: linear-gradient(to right, #000000, #1105bb);
 }
 
 main.cards section.card.contact {
@@ -220,27 +216,30 @@ main.cards section.card.about {
     box-shadow: 20px 20px 50px -30px #3415e2;
 }
 
+/* PARCEIRO */
 
+#parceiro {
+    
+}
 /***** O que é eAi? *****/
 
 .card-eai {
-    color: #2A438C;
+    color: #ec431d;
+    margin-top: 90px;
     
 }
 
 .card-eai h2 {
-	font-size: 52px;
     margin: 3rem 0;
     font-weight: 700;
     text-align: right;
-    margin-top: 20%;
 }
 
 .card-eai h5 {
-    margin: 3rem 0;
+    margin: 4rem 10;
     font-weight: 400;
-    text-align: right;
-    margin-top: 05%;
+    text-align: left;
+    
 }
 
 .robo {
@@ -254,19 +253,14 @@ main.cards section.card.about {
 
 /***** Video *****/
 
-
-
 .video{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
-    
 }
 
 .video img {
     width: 36%;
-    margin-top: 05%;
 }
 .robo2 {
     padding: 20px;
@@ -280,7 +274,7 @@ main.cards section.card.about {
 /***** FOOTER *****/
 
 .page-footer {
-    background-color: #2A438C;
+    background-color: #fd613e;
 }
 
 footer .endereco {
@@ -337,28 +331,18 @@ footer .copyright {
     .bloco {
         height: 100%;
     }
-	
-	.bloco-home {
-		height: 100%;
-	}
 
     /***** HOME *****/
     #home {
         padding-top: 0;
     }
     .card-apresentacao h1 {
-        font-size: 25px;
+        font-size: 2.5rem;
     }
     
     .card-apresentacao h5 {
-        font-size: 18px;
+        font-size: 1.3rem;
     }
-	
-	/***** PRODUTO *****/
-	
-	#produto h1 {
-		font-size: 25px;
-	}
 	
 	#produto {
 		
@@ -412,8 +396,8 @@ footer .copyright {
     main.cards section.card button {
         font-size: 70%;
     }
-	
-	/***** FOOTER *****/
+
+    /***** FOOTER *****/
 	
 	footer .redes-sociais {
         display: flex;
@@ -432,7 +416,7 @@ footer .copyright {
 	}
 	
 	footer .link-app ul {
-		display: flex;
+	    display: flex;
 		justify-content: start;
 		align-items: center;
 		gap: 50px;
@@ -445,17 +429,12 @@ footer .copyright {
 	footer .copyright {
 		font-size: 10px;
 	}
-
 }
 
 
 
 @media only screen and (min-width: 602px) and (max-width: 991px) {
     .bloco {
-        height: 100%;
-    }
-
-    .bloco-home {
         height: 100%;
     }
 
@@ -469,7 +448,6 @@ footer .copyright {
     
     .card-apresentacao h5 {
         font-size: 1.5rem;
-		color: #2A438C;
     }
 
     /***** O que é eAi? *****/
@@ -529,8 +507,8 @@ footer .copyright {
     main.cards section.card button {
         font-size: 70%;
     }
-	
-	/***** FOOTER *****/	
+
+    /***** FOOTER *****/	
 	
 	footer .redes-sociais ul {
         display: flex;

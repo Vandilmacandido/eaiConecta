@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt=br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,10 +9,23 @@
     <!--CSS-->
     <link rel="stylesheet" href="css/loginParceiro.css">
     <link rel="stylesheet" href="css/media.css">
+    <STYLE type=text/css>BODY {
+        BACKGROUND-IMAGE: url(image/bg/senha.jpg); BACKGROUND-REPEAT: no-repeat
+        }</STYLE>
 
     <!--JS & jQuery-->
-    <script type="text/javascript" src="js/script.js"></script>
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"></script>
+
+    <script  src="js/login.js"></script>
+
 </head>
 <body>
     <div id="container">
@@ -31,16 +44,16 @@
                 Seja bem vindo de volta.
             </h1>
 
-            <div class="box">
+            <div id="login-form">
                 <h2>Ambiente do Parceiro</h2>
-                <input type="text" name="username" id="username" placeholder="usuário">
+                <input type="email" name="email" id="email" placeholder="E-mail">
                 <input type="password" name="password" id="password" placeholder="senha">
                 
                 <a href="recuperarsenhaparceiro.html">
                     <p>Esqueceu a sua senha?</p>
                 </a>
 
-                <button>Login</button>
+                <button type="submit" id="login-button" onclick="login()"> Faça Login </button>
                 
                 <a href="cadastroparceiro.html">
                     <p>Criar uma conta</p>
@@ -55,5 +68,24 @@
             </div>
         </div>
     </div>
+
+    
+<script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth-compat.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyBKHtCLyOhWzQBXsbYrHqvBusj5qQJtZGI",
+        authDomain: "aplicativoeai-33c73.firebaseapp.com",
+        databaseURL: "https://aplicativoeai-33c73-default-rtdb.firebaseio.com",
+        projectId: "aplicativoeai-33c73",
+        storageBucket: "aplicativoeai-33c73.appspot.com",
+        messagingSenderId: "1087305083753",
+        appId: "1:1087305083753:web:c407032ef5a8c7eaa3abf8",
+        measurementId: "G-2EEG3CX3DZ"
+    };
+    firebase.initializeApp(firebaseConfig);
+    
+</script>    
+<script  src="js/login.js"></script>
 </body>
 </html>
