@@ -38,7 +38,7 @@ body {
 /***** MENU *****/
 
 nav {
-    background-color: #fd613e;
+    background-color: #2A438C;
     height: 70px;
 }
 
@@ -46,7 +46,7 @@ nav .logoMenu {
     margin-left: 30px;
 }
 nav ul .btn {
-    background-color: #2A438C;
+    background-color: #f20000;
     border-radius: 30px;
 }
 
@@ -55,7 +55,7 @@ nav ul .btn:hover {
 }
 
 .side-nav {
-    background-color: #fd613e;
+    background-color: #2A438C;
 }
 
 .side-nav li>a {
@@ -63,7 +63,7 @@ nav ul .btn:hover {
 }
 
 .side-nav .btn {
-    background-color: #2A438C;
+    background-color: #f20000;
     border-radius: 30px;
 }
 
@@ -81,7 +81,7 @@ nav ul .btn:hover {
 
 /***** HOME *****/
 #home {
-    background: linear-gradient(180deg,#ff9078 0%, #fd613e 50%, #ec431d 100%);
+    background: linear-gradient(180deg,#a2aed4 0%, #5b7ee6 50%, #2A438C 100%);
     padding-top: 70px;
 }
 
@@ -103,9 +103,15 @@ nav ul .btn:hover {
 }
 
 .card-apresentacao .btn{
+    background-color: #f20000;
+    border-radius: 30px;
+}
+
+.card-apresentacao .btn:hover {
     background-color: #2A438C;
     border-radius: 30px;
 }
+
 .card-robo {
     padding: 17px;
     box-sizing: border-box;
@@ -117,8 +123,8 @@ nav ul .btn:hover {
 /***** PRODUTO *****/
 
 #produto {
-	background: linear-gradient(180deg,#ec431d 0%, #fd613e 50%, #ff9078 100%);
-    padding-top: 70px;
+	background: linear-gradient(180deg, #2A438C 5.76%, rgba(42, 67, 140, 0) 100%);
+    padding-top: 5px;
     
     height: 100vh;
     width: 100%;
@@ -223,7 +229,7 @@ main.cards section.card.about {
 /***** O que é eAi? *****/
 
 .card-eai {
-    color: #ec431d;
+    color: #2A438C;
     margin-top: 90px;
     
 }
