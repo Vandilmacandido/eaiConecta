@@ -10,13 +10,23 @@
 
     <link rel="stylesheet" href="./css/parceiroPag.css">
     <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/funcionario.css">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="utf-8">
 
+    <!--Mapa-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+
     
-    <title>Dashboard</title>
+    <title>Acompanhamento</title>
 </head>
 
 <body>
@@ -56,9 +66,9 @@
 
     <section class="main">
         <div class="sidebar">
-            <h3>Dashboard</h3>
-            <a class="sidebar-active" href="parceiropages.html"><i class="fa-solid fa-house"></i>Dashboard</a>
-            <a href="acompanhamento.html"><i class="fa-solid fa-house"></i>Acompanhar Funcionario</a>
+            <h3>Acompanhar Funcionários</h3>
+            <a href="parceiropages.html"><i class="fa-solid fa-house"></i>Pagina 1</a>
+            <a class="sidebar-active" href="#"><i class="fa-solid fa-house"></i>Acompanhar Funcionario</a>
             <a href="#"><i class="fa-solid fa-house"></i>Relatórios 2</a>
             <a href="#"><i class="fa-solid fa-house"></i>Relatórios 3</a>
             <a href="#"><i class="fa-solid fa-house"></i>Relatórios 4</a>
@@ -69,11 +79,11 @@
         </div>
         <div class="content">
             <div class="titulo-secao">
-                <h2>Dashboard</h2>
+                <h2>Acompanhar Funcionários</h2>
                 <br>
                 <div class="separator"></div>
                 <br>
-                <p><i class="fa-solid fa-house"> / </i> Dashboard</p>
+                <p><i class="fa-solid fa-house"> / </i> Acompanhar Funcionários</p>
             </div>
 
             
@@ -86,7 +96,7 @@
             <section id="produto">
                 <div class="bloco">
                     <div class="row">
-                        <h1 class="center">Colaboradores Aptos a trabalharem</h1>
+                        <h1 class="center">Saiba onde estão seus funcionarios em tempo real..</h1>
                         <main class="cards">
                             <section class="card contact col s12 m12 l3">
                                 <div class="icon">
@@ -105,8 +115,18 @@
                                     </li>
                                 </span>
                                 <button onclick="window.location.href = '#'">Liberar para Serviço</button><br>
+                                <button onclick="window.location.href = 'funcionario.html'">Pagina do Marcelo</button><br>
                                 <button id="excluir" onclick="window.location.href = '#'">Excluir Funcionario</button>
+                                <div id="localizacao">
+                                    <br>
+                                    <button type="submit" id="enviar" onclick="enviar()">Localização do Marcelo</button>
+                                    <h2 id="nome1-log">Localização do Marcelo é: </h2>
+                                    <h2 id="nome-log"></h2>
+                                    <div id="map"></div>
+                                    
+                                </div>
                             </section>
+                            
                             <section class="card shop col s12 m12 l3">
                                 <div class="icon">
                                     <img src="image/funcionarios/2.png" alt="">
@@ -124,7 +144,16 @@
                                     </li>
                                 </span>
                                 <button onclick="window.location.href = '#'">Liberar para Serviço</button><br>
+                                <button onclick="window.location.href = '#'">Pagina da Vandilma</button><br>
                                 <button id="excluir" onclick="window.location.href = '#'">Excluir Funcionario</button>
+                                <div id="localizacao">
+                                    <br>
+                                    <button type="submit" id="enviar" onclick="enviar()">Localização da Vandilma</button>
+                                    <h2 id="nome1-log">Localização do Vandilma é: </h2>
+                                    <h2 id="nome-log"></h2>
+                                    <div id="map"></div>
+                                    
+                                </div>
                             </section>
                             <section class="card about col s12 m12 l3">
                                 <div class="icon">
@@ -143,7 +172,16 @@
                                     </li>
                                 </span>
                                 <button onclick="window.location.href = '#'">Liberar para Serviço</button><br>
+                                <button onclick="window.location.href = '#'">Pagina do Carlos Eduardo</button><br>
                                 <button id="excluir" onclick="window.location.href = '#'">Excluir Funcionario</button>
+                                <div id="localizacao">
+                                    <br>
+                                    <button type="submit" id="enviar" onclick="enviar()">Localização do Carlos Eduardo</button>
+                                    <h2 id="nome1-log">Localização do Carlos Eduardo é : </h2>
+                                    <h2 id="nome-log"></h2>
+                                    <div id="map"></div>
+                                    
+                                </div>
                         </main>
                     </div>              
                 </div>
@@ -160,32 +198,9 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/localizacao.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <div class="grafico">
-        <script>
-            const ctx = document.getElementById('myChart');
-        
-            new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Marcelo Ponte', 'Vandilma', 'Carlos Eduardo'],
-                datasets: [{
-                label: 'Gráfico de Serviços',
-                data: [12, 19, 3, 5, 2, 3],
-                borderWidth: 2
-                }]
-            },
-            options: {
-                scales: {
-                y: {
-                    beginAtZero: true
-                }
-                }
-            }
-            });
-        </script>
+    
     </div>
 </body>
 </html>

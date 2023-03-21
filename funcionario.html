@@ -8,15 +8,25 @@
 	<!-- Import Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-    <link rel="stylesheet" href="./css/parceiroPag.css">
+    <link rel="stylesheet" href="./css/funcionario.css">
     <link rel="stylesheet" href="./css/dashboard.css">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="utf-8">
 
+    <!--Mapa-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+
     
-    <title>Dashboard</title>
+    
+    <title>Pag. Funcionario</title>
 </head>
 
 <body>
@@ -56,24 +66,22 @@
 
     <section class="main">
         <div class="sidebar">
-            <h3>Dashboard</h3>
-            <a class="sidebar-active" href="parceiropages.html"><i class="fa-solid fa-house"></i>Dashboard</a>
-            <a href="acompanhamento.html"><i class="fa-solid fa-house"></i>Acompanhar Funcionario</a>
-            <a href="#"><i class="fa-solid fa-house"></i>Relatórios 2</a>
-            <a href="#"><i class="fa-solid fa-house"></i>Relatórios 3</a>
-            <a href="#"><i class="fa-solid fa-house"></i>Relatórios 4</a>
+            <h3>Funcionário</h3>
+            <a class="sidebar-active" href="#"><i class="fa-solid fa-house"></i>Meu Painel</a>
+            
             <br>
             <div class="separator"></div>
              
             
+            <div class="separator"></div>
         </div>
         <div class="content">
             <div class="titulo-secao">
-                <h2>Dashboard</h2>
+                <h3>Serviços Excutados</h3>
                 <br>
                 <div class="separator"></div>
                 <br>
-                <p><i class="fa-solid fa-house"> / </i> Dashboard</p>
+                <p><i class="fa-solid fa-house"> / </i> Funcionario</p>
             </div>
 
             
@@ -81,13 +89,22 @@
             <div>
                 <canvas id="myChart"></canvas>
             </div>
-
+            <div id="localizacao">
+                <h2 id="nome1-log">Localização do serviço : </h2>
+                <div id="map"></div>
+                <h2 id="nome-log"></h2>
+                <button type="submit" id="enviar" onclick="enviar()">Localização do serviço</button>
+            </div>
 
             <section id="produto">
+                
                 <div class="bloco">
                     <div class="row">
-                        <h1 class="center">Colaboradores Aptos a trabalharem</h1>
+                        <h1 class="center">Painel do Funcionário</h1>
                         <main class="cards">
+                            
+                            
+                            
                             <section class="card contact col s12 m12 l3">
                                 <div class="icon">
                                     <img src="image/funcionarios/1.png" alt="">
@@ -104,53 +121,21 @@
                                         Tipo Func: CLT <br>
                                     </li>
                                 </span>
-                                <button onclick="window.location.href = '#'">Liberar para Serviço</button><br>
-                                <button id="excluir" onclick="window.location.href = '#'">Excluir Funcionario</button>
-                            </section>
-                            <section class="card shop col s12 m12 l3">
-                                <div class="icon">
-                                    <img src="image/funcionarios/2.png" alt="">
-                                </div>
-                                <h3>Vandilma</h3>
-                                <span>
-                                    <li>
-                                    Data treinamento - 1/1/1 <br>
-                                    </li>
-                                    <li >
-                                        Qual robo : Contagem Inteligente <br>
-                                    </li>
-                                    <li>
-                                        Tipo Func: CLT <br>
-                                    </li>
-                                </span>
-                                <button onclick="window.location.href = '#'">Liberar para Serviço</button><br>
-                                <button id="excluir" onclick="window.location.href = '#'">Excluir Funcionario</button>
-                            </section>
-                            <section class="card about col s12 m12 l3">
-                                <div class="icon">
-                                    <img src="image/funcionarios/3.png" alt="">
-                                </div>
-                                <h3>Carlos Eduardo</h3>
-                                <span>
-                                    <li>
-                                    Data treinamento - 1/1/1 <br>
-                                    </li>
-                                    <li >
-                                        Qual robo : Nariz Cheirador <br>
-                                    </li>
-                                    <li>
-                                        Tipo Func: CLT <br>
-                                    </li>
-                                </span>
-                                <button onclick="window.location.href = '#'">Liberar para Serviço</button><br>
-                                <button id="excluir" onclick="window.location.href = '#'">Excluir Funcionario</button>
+                                <button onclick="window.location.href = '#'">Solicitar Serviço</button><br>
+                                
+                            
                         </main>
                     </div>              
                 </div>
-            </section> 
+                
+
+            </section> <br>
+            <br>
+            <br>
             
         </div><!--Content-->
     </section><!--Main-->
+    
     
 	
 	
@@ -162,6 +147,8 @@
     <script src="./js/main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="js/localizacao.js"></script>
 
     <div class="grafico">
         <script>
@@ -170,7 +157,7 @@
             new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Marcelo Ponte', 'Vandilma', 'Carlos Eduardo'],
+                labels: ['Marcelo Ponte'],
                 datasets: [{
                 label: 'Gráfico de Serviços',
                 data: [12, 19, 3, 5, 2, 3],
@@ -186,6 +173,8 @@
             }
             });
         </script>
+
+        
     </div>
 </body>
 </html>
