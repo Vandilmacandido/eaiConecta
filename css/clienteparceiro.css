@@ -76,13 +76,13 @@ main.cards section.card button {
 }
 
 main.cards section.card.contact button {
-    background: linear-gradient(to right, #ec2f2f, #FFC7D9);
+    background: linear-gradient(to right, #3317a4, #64aef3);
 }
 main.cards section.card.shop button {
-    background: linear-gradient(to right, #3E8AFF, #BBDEFF);
+    background: linear-gradient(to right, #ec2f2f, #f89f9f);
 }
 main.cards section.card.about button {
-    background: linear-gradient(to right, #2e15cc, #c5bef1);
+    background: linear-gradient(to right, #000000, #1b05a8);
 }
 
 main.cards section.card.contact {

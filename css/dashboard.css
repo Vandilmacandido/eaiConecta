@@ -37,7 +37,7 @@ html, body {height: 100%;}
 
 .sidebar {
     width: 20%;
-    background-color: #2A438C;
+    background-color: #d11c1c;
     height: 200%;
     
 }
@@ -89,11 +89,11 @@ html, body {height: 100%;}
 }
 
 .titulo-secao svg {
-    color: #2A438C;
+    color: #d11c1c;
 }
 
 .titulo-secao i svg {
-    color: #2A438C;
+    color: #d11c1c;
 }
 
 .separator {

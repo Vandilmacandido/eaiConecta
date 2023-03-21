@@ -48,7 +48,7 @@ body {
 /***** MENU *****/
 
 nav {
-    background-color: #2A438C;
+    background-color: #d11c1c;
     height: 70px;
 }
 
@@ -56,7 +56,7 @@ nav .logoMenu {
     margin-left: 70px;
 }
 nav ul .btn {
-    background-color: #2A438C;
+    background-color: #d11c1c;
     border-radius: 30px;
 }
 
@@ -73,20 +73,20 @@ nav ul .btn:hover {
 }
 
 .side-nav .btn {
-    background-color: #2A438C;
+    background-color: #d11c1c;
     border-radius: 30px;
 }
 
 .side-nav li>a.btn:hover {
-    background-color: #2A438C;
+    background-color: #d11c1c;
 }
 
 .side-nav .dropdown-content {
-    background-color: #2A438C;
+    background-color: #d11c1c;
 }
 
 .side-nav .dropdown-content li:hover {
-    background-color: #2A438C;
+    background-color: #d11c1c;
 }
 
 
@@ -96,7 +96,7 @@ nav ul .btn:hover {
 #produto {
     margin-top: 15px;
     border-radius: 20px;
-	background: linear-gradient(180deg, #2A438C 5.76%, rgba(42, 67, 140, 0) 100%);
+	background: linear-gradient( #d11c1c  0%, #e59292 50%, #e8cdcd 100%);
     padding-top: 05px;
     
    
@@ -384,7 +384,7 @@ main.cards section.card.about {
 }
 
 #enviar {
-    background-color: #2A438C;
+    background-color: #d11c1c;
     color: #fff;
     border-radius: 10px;
     padding: 10px;
@@ -400,7 +400,7 @@ main.cards section.card.about {
 
 #localizacao {
     color: white;
-    background-color: #2A438C;
+    background-color: #d11c1c;
     margin-top: 80px;
     border-radius: 20px;
 }

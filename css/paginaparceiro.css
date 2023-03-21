@@ -40,7 +40,7 @@ body {
 /***** MENU *****/
 
 nav {
-    background-color: #2A438C;
+    background-color: #d11c1c;
     height: 70px;
 }
 
@@ -48,16 +48,17 @@ nav .logoMenu {
     margin-left: 30px;
 }
 nav ul .btn {
-    background-color: #3e5088;
+    background-color: #2A438C;
     border-radius: 30px;
 }
 
 nav ul .btn:hover {
-    background-color: #3e5088;
+    background-color: #e6f633;
+    color: black;
 }
 
 .side-nav {
-    background-color: #2A438C;
+    background-color: #d11c1c;
 }
 
 .side-nav li>a {
@@ -65,25 +66,25 @@ nav ul .btn:hover {
 }
 
 .side-nav .btn {
-    background-color: #3e5088;
+    background-color: #d11c1c;
     border-radius: 30px;
 }
 
 .side-nav li>a.btn:hover {
-    background-color: #2A438C;
+    background-color: #d11c1c;
 }
 
 .side-nav .dropdown-content {
-    background-color: #2A438C;
+    background-color: #d11c1c;
 }
 
 .side-nav .dropdown-content li:hover {
-    background-color: #2A438C;
+    background-color: #d11c1c;
 }
 
 /***** HOME *****/
 #home {
-    background: linear-gradient(180deg,#a2aed4 0%, #5b7ee6 50%, #2A438C 100%);
+    background: linear-gradient(180deg,#e8cdcd 0%, #e59292 50%, #d11c1c 100%);
     padding-top: 70px;
 }
 
@@ -105,12 +106,13 @@ nav ul .btn:hover {
 }
 
 .card-apresentacao .btn{
-    background-color: #3e5088;
+    background-color: #2A438C;
     border-radius: 30px;
 }
 
 .card-apresentacao .btn:hover {
-    background-color: #2A438C;
+    background-color: #e6f633;
+    color: black;
     border-radius: 30px;
 }
 
@@ -125,9 +127,8 @@ nav ul .btn:hover {
 /***** PRODUTO *****/
 
 #produto {
-	background: linear-gradient(180deg, #2A438C 5.76%, rgba(42, 67, 140, 0) 100%);
-    padding-top: 5px;
-    
+	background: linear-gradient( #d11c1c  0%, #eb6e6e 50%, #ef8686 100%);
+    padding-top: 70px;
     height: 100vh;
     width: 100%;
 
@@ -231,7 +232,7 @@ main.cards section.card.about {
 /***** O que é eAi? *****/
 
 .card-eai {
-    color: #2A438C;
+    color: #d11c1c;
     margin-top: 90px;
     
 }
@@ -281,7 +282,7 @@ main.cards section.card.about {
 /***** FOOTER *****/
 
 .page-footer {
-    background-color: #3e5088;
+    background-color: #d11c1c;
 }
 
 footer .endereco {
