@@ -38,7 +38,7 @@ html, body {height: 100%;}
 .sidebar {
     width: 20%;
     background-color: #2A438C;
-    height: 100%;
+    height: 200%;
     
 }
 
@@ -66,11 +66,12 @@ html, body {height: 100%;}
     width: 80%;
     background-color:rgb(237, 237, 237);
     padding: 20px;
+    
 }
 
 .titulo-secao {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .titulo-secao h2 {
@@ -107,4 +108,30 @@ html, body {height: 100%;}
     justify-content: space-between;
     width: 100%;
     padding: 10px;
+}
+
+.feed {
+    background-color: rgb(191, 191, 191);
+    width: 20%;
+    border-radius: 20px;
+    padding: 50px;
+    margin-left: 80%;
+    
+    margin-top: -40%;
+    
+}
+
+.feed-single {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 05px;
+
+}
+
+.feed-text span {
+    color: #000000;
+}
+
+.feed .feed-time {
+    font-size: 14px;
 }

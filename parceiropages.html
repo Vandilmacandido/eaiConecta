@@ -81,6 +81,12 @@
                 <p><i class="fa-solid fa-house"> / </i> Pag..1</p>
             </div>
 
+            
+
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+
 
             <section id="produto">
                 <div class="bloco">
@@ -147,6 +153,7 @@
                     </div>              
                 </div>
             </section> 
+            
         </div><!--Content-->
     </section><!--Main-->
     
@@ -159,5 +166,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="./js/main.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <div class="grafico">
+        <script>
+            const ctx = document.getElementById('myChart');
+        
+            new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Marcelo Ponte', 'Vandilma', 'Carlos Eduardo'],
+                datasets: [{
+                label: 'Gráfico de Serviços',
+                data: [12, 19, 3, 5, 2, 3],
+                borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                y: {
+                    beginAtZero: true
+                }
+                }
+            }
+            });
+        </script>
+    </div>
 </body>
 </html>
