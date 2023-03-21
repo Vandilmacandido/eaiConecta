@@ -386,3 +386,9 @@ main.cards section.card.about {
         gap: 18px;
 	}
 }    
+
+
+.content .titulo-secao ul i svg {
+    background-color: #ea4a4a;
+    color: #3415e2;
+}

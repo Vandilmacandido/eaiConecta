@@ -81,12 +81,18 @@ html, body {height: 100%;}
 }
 
 .titulo-secao p {
+    display: flex;
+    justify-content: flex-start;
     font-size: 15px;
     padding: 5px;
     margin-left: 5px;
 }
 
 .titulo-secao svg {
+    color: #2A438C;
+}
+
+.titulo-secao i svg {
     color: #2A438C;
 }
 
