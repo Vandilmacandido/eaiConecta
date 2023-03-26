@@ -21,11 +21,14 @@ body {
     
 }
 
+
 body {
     
     font-family: 'Roboto', sans-serif;
     
 }
+
+
 
 .row {
     margin-bottom: 0;
@@ -386,4 +389,28 @@ main.cards section.card.about {
 .content .titulo-secao ul i svg {
     background-color: #ea4a4a;
     color: #3415e2;
+}
+
+#detalhes {
+    background-color: #e6e6e6;
+}
+
+#detalhes-p {
+    color: #d11c1c;
+    font-size: 20px;
+}
+
+.btn-aceitar {
+    background-color: #058233;
+    color: white;
+}
+
+.btn-excluir {
+    background-color: #c90f0f;
+    color: white;
+}
+
+.btn-fechar {
+    background-color: #0fa1c9;
+    color: white;
 }

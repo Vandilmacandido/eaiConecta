@@ -1,62 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-	<!-- Import Font Awesome -->
+    <!-- Import Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
     <link rel="stylesheet" href="./css/parceiroPag.css">
     <link rel="stylesheet" href="./css/dashboard.css">
 
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8">
 
-    
+
     <title>Dashboard</title>
 </head>
 
 <body>
+
     <header>
-        
+
 
         <div class="navbar-fixed">
             <!-- Dropdown Structure -->
-        <ul id="dropdown1" class="dropdown-content">
-            <li><a href="#">Perfil</a></li>
-            <li class="divider"></li>
-            <li><a href="index.html">Sair</a></li>
-        </ul>
-        <nav>
-            <div class="nav-wrapper">
-                
-                <a href="index.html" class="brand-logo"><img src="./image/logo.svg" alt="" class="logoMenu"></a>
-                <a href="index.html" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#produto">Contato conosco</a></li>
-                    <li><a href="#servicos">Perfil</a></li>
-                    <!-- Dropdown Trigger -->
-                    <li><a class="dropdown-button" href="#" data-activates="dropdown1">Logout<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <div class="info-header">
-                        <i class="fa-solid fa-bell"></i>
-                        <img src="image/funcionarios/1.png" width="100" height="60">
-                    </div>
-                </ul>
-            </div>
-            
-        </nav>
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="#">Perfil</a></li>
+                <li class="divider"></li>
+                <li><a href="index.html">Sair</a></li>
+            </ul>
+            <nav>
+                <div class="nav-wrapper">
+
+                    <a href="index.html" class="brand-logo"><img src="./image/logo.svg" alt="" class="logoMenu"></a>
+                    <a href="index.html" data-activates="mobile-demo" class="button-collapse"><i
+                            class="material-icons">menu</i></a>
+
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#">Empresa Brilux</a></li>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#produto">Contato conosco</a></li>
+                        <li><a href="#servicos">Perfil</a></li>
+                        <!-- Dropdown Trigger -->
+                        <li><a class="dropdown-button" href="#" data-activates="dropdown1">Logout<i
+                                    class="material-icons right">arrow_drop_down</i></a></li>
+                        <div class="info-header">
+                            <i class="fa-solid fa-bell"></i>
+                            <img src="image/funcionarios/1.png" width="100" height="60">
+                        </div>
+                    </ul>
+                </div>
+
+            </nav>
         </div>
     </header>
 
-    
+
 
     <section class="main">
         <div class="sidebar">
-            <h3>Dashboard</h3>
+            <br>
+            <h3>Área do Parceiro:  ===></h3>
             <a class="sidebar-active" href="parceiropages.html"><i class="fa-solid fa-house"></i>Dashboard</a>
             <a href="acompanhamento.html"><i class="fa-solid fa-house"></i>Acompanhar Funcionario</a>
             <a href="#"><i class="fa-solid fa-house"></i>Relatórios 2</a>
@@ -64,11 +71,211 @@
             <a href="#"><i class="fa-solid fa-house"></i>Relatórios 4</a>
             <br>
             <div class="separator"></div>
-            
-             
-            
+
         </div>
+
+
         <div class="content">
+            <div>
+
+
+                <ul class="collection">
+                    <img src="image/LogoEmpresa/empresa de limpeza/Brilux.png" id="logo-empresa" class="circle">
+                    <br>
+                    <h4>Pedidos Recebidos</h4>
+                    <div class="separator"></div>
+
+                 <!-- Faculdade M. Nassau -->
+                    <li class="collection-item avatar">
+                        <img src="image/LogoEmpresa/faculdade_mauricio_de_nassau.png" alt="" class="circle">
+                        <span class="title">Faculdade M. Nassau</span>
+                        <p>Data de Solicitação : 15/03/23 <br>
+                            CNPJ: 00.000.000/0000-00
+                        </p>
+                                                
+                        <!-- Modal Estrutura -->
+                        <section>
+                            <!-- Modal ativação do botão -->
+                            <a class="waves-effect waves-light btn modal-trigger secondary-content " href="#modal1">+ Detalhes</a>
+                            
+                            <!-- Modal  -->
+                            <div id="modal1" class="modal">
+                                <div class="modal-content">
+                                    <h4>Detalhes :</h4>
+                                    <div class="separator"></div>
+                                    <div id="detalhes">
+                                        <h5>Cliente :</h5>
+                                        <p id="detalhes-p"> Faculdade M. Nassau</p>
+                                    </div>
+                                    <div id="detalhes">
+                                        <h5>Horario da Solicitação :</h5>
+                                        <p> 16:21h - 15/03/2023</p>
+                                    </div>
+                                    <div id="detalhes">
+                                        <h5>Endereço :</h5>
+                                        <p> Rua Talll, Nº 00000</p>
+                                    </div>
+                                    <div id="detalhes">
+                                        <h5>Item Solicitado :</h5>
+                                        <p> Robô Txau Vírus</p>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat btn-aceitar">Aceitar Serviço</a>
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat btn-excluir">Excluir Serviço</a>
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat btn-fechar">Fechar</a>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+
+                    <!-- Hospital Português-->
+                    <li class="collection-item avatar">
+                        <img src="image/LogoEmpresa/hospital.png" alt="" class="circle">
+                        <span class="title">Hospital Português</span>
+                        <p>Data de Solicitação : 18/03/23 <br>
+                            CNPJ: 00.000.000/0000-00
+                        </p>
+                                                
+                        <!-- Modal Estrutura -->
+                        <section>
+                            <!-- Modal ativação do botão -->
+                            <a class="waves-effect waves-light btn modal-trigger secondary-content" href="#modal2">+ Detalhes</a>
+
+                            <!-- Modal  -->
+                            <div id="modal2" class="modal">
+                                <div class="modal-content">
+                                    <h4>Detalhes :</h4>
+                                    <div class="separator"></div>
+                                    <div id="detalhes">
+                                        <h5>Cliente :</h5>
+                                        <p id="detalhes-p"> Hospital Português</p>
+                                    </div>
+                                    <div id="detalhes">
+                                        <h5>Horario da Solicitação :</h5>
+                                        <p> 10:50h - 18/03/2023</p>
+                                    </div>
+                                    <div id="detalhes">
+                                        <h5>Endereço :</h5>
+                                        <p> Rua Talll, Nº 00000</p>
+                                    </div>
+                                    <div id="detalhes">
+                                        <h5>Item Solicitado :</h5>
+                                        <p> Robô Txau Vírus</p>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat btn-aceitar">Aceitar Serviço</a>
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat btn-excluir">Excluir Serviço</a>
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat btn-fechar">Fechar</a>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+
+                    <!-- Hospital de Clinicas-->
+                    <li class="collection-item avatar">
+                        <img src="image/LogoEmpresa/logo_hospital-geral-do-inga_UvsttY.png" alt="" class="circle">
+                        <span class="title">Hospital de Clinicas</span>
+                        <p>Data de Solicitação : 19/03/23 <br>
+                            CNPJ: 00.000.000/0000-00
+                        </p>
+                                                
+                        <!-- Modal Estrutura -->
+                        <section>
+                            <!-- Modal ativação do botão -->
+                            <a class="waves-effect waves-light btn modal-trigger secondary-content" href="#modal3">+ Detalhes</a>
+
+                            <!-- Modal  -->
+                            <div id="modal3" class="modal">
+                                <div class="modal-content">
+                                    <h4>Detalhes :</h4>
+                                    <div class="separator"></div>
+                                    <div id="detalhes">
+                                        <h5>Cliente :</h5>
+                                        <p id="detalhes-p"> Hospital de Clinicas</p>
+                                    </div>
+                                    <div id="detalhes">
+                                        <h5>Horario da Solicitação :</h5>
+                                        <p> 09:28h - 19/03/2023</p>
+                                    </div>
+                                    <div id="detalhes">
+                                        <h5>Endereço :</h5>
+                                        <p> Rua Talll, Nº 00000</p>
+                                    </div>
+                                    <div id="detalhes">
+                                        <h5>Item Solicitado :</h5>
+                                        <p> Robô Txau Vírus</p>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat btn-aceitar">Aceitar Serviço</a>
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat btn-excluir">Excluir Serviço</a>
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat btn-fechar">Fechar</a>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+
+                    <!-- CNS House Security-->
+                    <li class="collection-item avatar">
+                        <img src="image/LogoEmpresa/LOGO.png" alt="" class="circle">
+                        <span class="title">CNS House Security</span>
+                        <p>Data de Solicitação : 23/03/23 <br>
+                            CNPJ: 00.000.000/0000-00
+                        </p>
+                                                
+                        <!-- Modal Estrutura -->
+                        <section>
+                            <!-- Modal ativação do botão -->
+                            <a class="waves-effect waves-light btn modal-trigger secondary-content" href="#modal4">+ Detalhes</a>
+
+                            <!-- Modal  -->
+                            <div id="modal4" class="modal">
+                                <div class="modal-content">
+                                    <h4>Detalhes :</h4>
+                                    <div class="separator"></div>
+                                    <div id="detalhes">
+                                        <h5>Cliente :</h5>
+                                        <p id="detalhes-p"> CNS House Security</p>
+                                    </div>
+                                    <div id="detalhes">
+                                        <h5>Horario da Solicitação :</h5>
+                                        <p> 07:57h - 23/03/2023</p>
+                                    </div>
+                                    <div id="detalhes">
+                                        <h5>Endereço :</h5>
+                                        <p> Rua Talll, Nº 00000</p>
+                                    </div>
+                                    <div id="detalhes">
+                                        <h5>Item Solicitado :</h5>
+                                        <p> Robô Txau Vírus</p>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat btn-aceitar">Aceitar Serviço</a>
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat btn-excluir">Excluir Serviço</a>
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat btn-fechar">Fechar</a>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                </ul>
+
+                <div id="popup" class="popup">
+
+                </div>
+
+            </div>
+
             <div class="titulo-secao">
                 <h2>Historico de Serviços</h2>
                 <div class="separator"></div>
@@ -77,108 +284,108 @@
                     <li class="tab col s3"><a class="active" href="#test-swipe-1">Aberto</a></li>
                     <li class="tab col s3"><a href="#test-swipe-2">Concluido</a></li>
                     <li class="tab col s3"><a href="#test-swipe-3">Cancelado</a></li>
-                  </ul>
-                  <div id="test-swipe-1" class="col s12 green">
+                </ul>
+                <div id="test-swipe-1" class="col s12 yellow">
                     <table>
                         <thead>
-                          <tr>
-                              <th>Nome</th>
-                              <th>Serviço</th>
-                              <th>Data</th>
-                              <th>Opção</th>
-                          </tr>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Serviço</th>
+                                <th>Data</th>
+                                <th>Opção</th>
+                            </tr>
                         </thead>
-                
+
                         <tbody>
-                          <tr>
-                            <td>Alvin</td>
-                            <td>Desinfecção</td>
-                            <td>01/01/2023</td>
-                            <td><button>Mais detalhes</button></td>
-                          </tr>
-                          <tr>
-                            <td>Alan</td>
-                            <td>Nariz Artificial</td>
-                            <td>01/01/2023</td>
-                            <td><button>Mais detalhes</button></td>
-                          </tr>
-                          <tr>
-                            <td>Jonathan</td>
-                            <td>Desinfecção</td>
-                            <td>01/01/2023</td>
-                            <td><button>Mais detalhes</button></td>
-                          </tr>
+                            <tr>
+                                <td>Alvin</td>
+                                <td>Desinfecção</td>
+                                <td>01/01/2023</td>
+                                <td><button>Mais detalhes</button></td>
+                            </tr>
+                            <tr>
+                                <td>Alan</td>
+                                <td>Nariz Artificial</td>
+                                <td>01/01/2023</td>
+                                <td><button>Mais detalhes</button></td>
+                            </tr>
+                            <tr>
+                                <td>Jonathan</td>
+                                <td>Desinfecção</td>
+                                <td>01/01/2023</td>
+                                <td><button>Mais detalhes</button></td>
+                            </tr>
                         </tbody>
-                      </table>
-                  </div>
-                  <div id="test-swipe-2" class="col s12 blue">
+                    </table>
+                </div>
+                <div id="test-swipe-2" class="col s12 green">
                     <table>
                         <thead>
-                          <tr>
-                              <th>Nome</th>
-                              <th>Serviço</th>
-                              <th>Data</th>
-                              <th>Opção</th>
-                          </tr>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Serviço</th>
+                                <th>Data</th>
+                                <th>Opção</th>
+                            </tr>
                         </thead>
-                
+
                         <tbody>
-                          <tr>
-                            <td>Alvin</td>
-                            <td>Desinfecção</td>
-                            <td>01/01/2023</td>
-                            <td><button>Mais detalhes</button></td>
-                          </tr>
-                          <tr>
-                            <td>Alan</td>
-                            <td>Nariz Artificial</td>
-                            <td>01/01/2023</td>
-                            <td><button>Mais detalhes</button></td>
-                          </tr>
-                          <tr>
-                            <td>Jonathan</td>
-                            <td>Desinfecção</td>
-                            <td>01/01/2023</td>
-                            <td><button>Mais detalhes</button></td>
-                          </tr>
+                            <tr>
+                                <td>Alvin</td>
+                                <td>Desinfecção</td>
+                                <td>01/01/2023</td>
+                                <td><button>Mais detalhes</button></td>
+                            </tr>
+                            <tr>
+                                <td>Alan</td>
+                                <td>Nariz Artificial</td>
+                                <td>01/01/2023</td>
+                                <td><button>Mais detalhes</button></td>
+                            </tr>
+                            <tr>
+                                <td>Jonathan</td>
+                                <td>Desinfecção</td>
+                                <td>01/01/2023</td>
+                                <td><button>Mais detalhes</button></td>
+                            </tr>
                         </tbody>
-                      </table>
-                  </div>
-                  <div id="test-swipe-3" class="col s12 red">
+                    </table>
+                </div>
+                <div id="test-swipe-3" class="col s12 red">
                     <table>
                         <thead>
-                          <tr>
-                              <th>Nome</th>
-                              <th>Serviço</th>
-                              <th>Data</th>
-                              <th>Opção</th>
-                          </tr>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Serviço</th>
+                                <th>Data</th>
+                                <th>Opção</th>
+                            </tr>
                         </thead>
-                
+
                         <tbody>
-                          <tr>
-                            <td>Alvin</td>
-                            <td>Desinfecção</td>
-                            <td>01/01/2023</td>
-                            <td><button>Mais detalhes</button></td>
-                          </tr>
-                          <tr>
-                            <td>Alan</td>
-                            <td>Nariz Artificial</td>
-                            <td>01/01/2023</td>
-                            <td><button>Mais detalhes</button></td>
-                          </tr>
-                          <tr>
-                            <td>Jonathan</td>
-                            <td>Desinfecção</td>
-                            <td>01/01/2023</td>
-                            <td><button>Mais detalhes</button></td>
-                          </tr>
+                            <tr>
+                                <td>Alvin</td>
+                                <td>Desinfecção</td>
+                                <td>01/01/2023</td>
+                                <td><button>Mais detalhes</button></td>
+                            </tr>
+                            <tr>
+                                <td>Alan</td>
+                                <td>Nariz Artificial</td>
+                                <td>01/01/2023</td>
+                                <td><button>Mais detalhes</button></td>
+                            </tr>
+                            <tr>
+                                <td>Jonathan</td>
+                                <td>Desinfecção</td>
+                                <td>01/01/2023</td>
+                                <td><button>Mais detalhes</button></td>
+                            </tr>
                         </tbody>
-                      </table>
-                  </div>
-                    
-                
+                    </table>
+                </div>
+
+
             </div>
 
             <div class="titulo-secao">
@@ -188,11 +395,12 @@
                 <br>
                 <p><i class="fa-solid fa-house"> / </i> Página Dashboard</p>
             </div>
-                     
+
             <div>
                 <canvas id="myChart"></canvas>
             </div>
-            
+
+
 
 
             <section id="produto">
@@ -209,7 +417,7 @@
                                     <li>
                                         Data treinamento - 1/1/1 <br>
                                     </li>
-                                    <li >
+                                    <li>
                                         Qual robo : Txau Vírus <br>
                                     </li>
                                     <li>
@@ -226,9 +434,9 @@
                                 <h3>Vandilma</h3>
                                 <span>
                                     <li>
-                                    Data treinamento - 1/1/1 <br>
+                                        Data treinamento - 1/1/1 <br>
                                     </li>
-                                    <li >
+                                    <li>
                                         Qual robo : Contagem Inteligente <br>
                                     </li>
                                     <li>
@@ -245,9 +453,9 @@
                                 <h3>Carlos Eduardo</h3>
                                 <span>
                                     <li>
-                                    Data treinamento - 1/1/1 <br>
+                                        Data treinamento - 1/1/1 <br>
                                     </li>
-                                    <li >
+                                    <li>
                                         Qual robo : Nariz Cheirador <br>
                                     </li>
                                     <li>
@@ -257,16 +465,16 @@
                                 <button onclick="window.location.href = '#'">Liberar para Serviço</button><br>
                                 <button id="excluir" onclick="window.location.href = '#'">Excluir Funcionario</button>
                         </main>
-                    </div>              
+                    </div>
                 </div>
-            </section> 
-            
+            </section>
+
         </div><!--Content-->
     </section><!--Main-->
-    
-	
-	
-	  
+
+
+
+
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -278,28 +486,31 @@
     <div class="grafico">
         <script>
             const ctx = document.getElementById('myChart');
-        
+
             new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Marcelo Ponte', 'Vandilma', 'Carlos Eduardo'],
-                datasets: [{
-                label: 'Gráfico de Serviços',
-                data: [12, 19, 3, 5, 2, 3],
-                borderWidth: 2
-                }]
-            },
-            options: {
-                scales: {
-                y: {
-                    beginAtZero: true
+                type: 'bar',
+                data: {
+                    labels: ['Marcelo Ponte', 'Vandilma', 'Carlos Eduardo'],
+                    datasets: [{
+                        label: 'Gráfico de Serviços',
+                        data: [12, 19, 3, 5, 2, 3],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
                 }
-                }
-            }
             });
 
-           
+
         </script>
+
     </div>
+    <script src="js/modal.js"></script>
 </body>
+
 </html>
