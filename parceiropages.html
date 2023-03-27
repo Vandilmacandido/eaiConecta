@@ -119,6 +119,18 @@
                                         <h5>Item Solicitado :</h5>
                                         <p> Robô Txau Vírus</p>
                                     </div>
+                                    <div class="separator"></div>
+                                    <br>
+                                    <div class="separator"></div>
+                                    <div class="input-field col s12">
+                                        <select multiple>
+                                          <option value="" disabled selected>Selecione Funcionario</option>
+                                          <option value="1">Marcelo</option>
+                                          <option value="2">Jãao</option>
+                                          <option value="3">Vandilma</option>
+                                        </select>
+                                        <label>Selecione Funcionario</label>
+                                      </div>
                                     
                                     
                                 </div>
@@ -507,6 +519,14 @@
 
     </div>
     <script src="js/modal.js"></script>
+    <script src="js/escolhafuncionario.js"></script>
+    <script type="text/javascript">//<![CDATA[
+        window.onload=function(){
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+        }//]]>
+    </script>
 </body>
 
 </html>
