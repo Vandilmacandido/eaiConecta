@@ -414,3 +414,18 @@ main.cards section.card.about {
     background-color: #0fa1c9;
     color: white;
 }
+
+#modal1 {
+    border-radius: 20px;
+}
+
+#modal2 {
+    border-radius: 20px;
+}
+
+#modal3 {
+    border-radius: 20px;
+}
+#modal4 {
+    border-radius: 20px;
+}
