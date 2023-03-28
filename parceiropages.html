@@ -125,7 +125,7 @@
                                     <br>
                                     <br>
                                     <div class="input-field col s12">
-                                        <select>
+                                        <select id="seletor" onchange="liberarBotao()">
                                           <option value="" disabled selected>Selecione Funcionário</option>
                                           <option value="1">Marcelo da Cerva</option>
                                           <option value="2">Jãao do Back</option>
@@ -139,8 +139,8 @@
                                     
                                 </div>
                                 <div class="modal-footer">
-                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat btn-aceitar">Aceitar Serviço</a>
-                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat btn-fechar">Fechar</a>
+                                    <button id="liberar-botao" class="modal-close waves-effect waves-green btn-flat btn-aceitar" onchange="liberarBotao()" disabled>Aceitar Serviço</button>
+                                    <button class="modal-close waves-effect waves-green btn-flat btn-fechar">Fechar</button>
                                 </div>
                             </div>
                         </section>
@@ -530,6 +530,20 @@
             $('select').material_select();
         });
         }//]]>
+    </script>
+
+    <script>
+        function liberarBotao() {
+            const option = document.querySelector('#seletor').value;
+        }
+
+        if (option) {
+            document.querySelector('#liberar-botao').disabled = false;
+            return
+        } else {
+            document.querySelector('#liberar-botao').disabled = true;
+        }
+        
     </script>
 </body>
 
