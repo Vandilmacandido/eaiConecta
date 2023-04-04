@@ -46,144 +46,159 @@
                 <div class="text-center">
                   <h1 class="h4 text-gray-900 mb-4">Criando sua Conta!</h1>
                 </div>
-                <form class="user">
+                <form class="user" method="post">
                   <div class="form-group">
                     <div class="mb-3 mb-sm-0">
+                      <label for="inputCnpj" class="form-label">CNPJ</label>
                       <input
                         data-mask="00.000.000/0000-00"
                         type="text"
                         class="form-control form-control-user"
                         id="inputCnpj"
-                        placeholder="CNPJ"
+                        placeholder="00.000.000/0000-00"
                         onblur="checkCnpj(this.value)"
                       />
                     </div>
                   </div>
                   <div class="form-group">
+                    <label for="inputNomeEmpresarial" class="form-label">Nome Empresarial</label>
                     <input
                       type="text"
                       class="form-control form-control-user"
                       id="inputNomeEmpresarial"
-                      placeholder="Nome empresarial"
+                      placeholder=""
                     />
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-7 mb-3 mb-sm-0">
+                      <label for="inputNomeFantasia" class="form-label">Nome Fantasia</label>
                       <input
                         type="text"
                         class="form-control form-control-user"
                         id="inputNomeFantasia"
-                        placeholder="Nome fantasia"
+                        placeholder=""
                       />
                     </div>
 
                     <div class="col-sm-5 mb-3 mb-sm-0">
+                      <label for="inputPorte" class="form-label">Porte</label>
                       <input
                         type="text"
                         class="form-control form-control-user"
                         id="inputPorte"
-                        placeholder="Porte"
+                        placeholder=""
                       />
                     </div>
                   </div>
                   <div class="form-group">
+                    <label for="inputLogradouro" class="form-label">Logradouro</label>
                     <input
                       type="text"
                       class="form-control form-control-user"
                       id="inputLogradouro"
-                      placeholder="Logradouro"
+                      placeholder=""
                     />
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-5 mb-3 mb-sm-0">
+                      <label for="inputNumero" class="form-label">Número</label>
                       <input
                         type="text"
                         class="form-control form-control-user"
                         id="inputNumero"
-                        placeholder="Número"
+                        placeholder=""
                       />
                     </div>
 
                     <div class="col-sm-7 mb-3 mb-sm-0">
+                      <label for="inputComplemento" class="form-label">Complemento</label>
                       <input
                         type="text"
                         class="form-control form-control-user"
                         id="inputComplemento"
-                        placeholder="Complemento"
+                        placeholder="Casa A"
                       />
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-3 mb-3 mb-sm-0">
+                      <label for="inputCep" class="form-label">Cep</label>
                       <input
                         type="text"
                         class="form-control form-control-user"
                         id="inputCep"
-                        placeholder="CEP"
+                        placeholder="00.000-000"
                       />
                     </div>
 
                     <div class="col-sm-9 mb-3 mb-sm-0">
+                      <label for="inputBairro" class="form-label">Bairro</label>
                       <input
                         type="text"
                         class="form-control form-control-user"
                         id="inputBairro"
-                        placeholder="Bairro"
+                        placeholder=""
                       />
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-10 mb-3 mb-sm-0">
+                      <label for="inputMunicipio" class="form-label">Município</label>
                       <input
                         type="text"
                         class="form-control form-control-user"
                         id="inputMunicipio"
-                        placeholder="Município"
+                        placeholder=""
                       />
                     </div>
 
                     <div class="col-sm-2 mb-3 mb-sm-0">
+                      <label for="inputUf" class="form-label">UF</label>
                       <input
                         type="text"
                         class="form-control form-control-user"
                         id="inputUf"
-                        placeholder="UF"
+                        placeholder=""
                       />
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label for="inputEmail" class="form-label">E-mail</label>
                       <input
                         type="email"
                         class="form-control form-control-user"
                         id="inputEmail"
-                        placeholder="Email"
+                        placeholder=""
                       />
                     </div>
                     <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label for="inputTelefone" class="form-label">Telefone</label>
                       <input
                         type="text"
                         class="form-control form-control-user"
                         id="inputTelefone"
-                        placeholder="Telefone"
+                        placeholder="(XX) XXXXX-XXXX"
                       />
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label for="inputSenha" class="form-label">Senha</label>
                       <input
                         type="password"
                         class="form-control form-control-user"
-                        id="exampleInputPassword"
-                        placeholder="Senha"
+                        id="inputSenha"
+                        placeholder="********"
                       />
                     </div>
                     <div class="col-sm-6">
+                      <label for="inputSenha" class="form-label">Repita Senha</label>
                       <input
                         type="password"
                         class="form-control form-control-user"
-                        id="exampleRepeatPassword"
-                        placeholder="Repita senha"
+                        id="inputSenha2"
+                        placeholder="********"
                       />
                     </div>
                   </div>
