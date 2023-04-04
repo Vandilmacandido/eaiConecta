@@ -1,0 +1,18 @@
+body {
+    background-color: #fdf8f6;
+    }
+
+.bg {
+    background-color: #f25116;
+    padding: 100;
+}
+
+.form-control:focus {
+    border-color: rgba(242, 81, 22, 0.50);
+    box-shadow: 0 0 0 0.2rem rgb(242 81 22 / 25%);
+}
+
+.bg img{
+    max-width: 80%;
+    height: 80%;
+}
