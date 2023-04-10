@@ -12,6 +12,7 @@
 
   <link rel="stylesheet" href="./css/style.css" />
 
+
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
@@ -33,13 +34,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link text-white" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link text-white" aria-current="page" href="#inicio">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" aria-current="page" href="#">Produto</a>
+              <a class="nav-link text-white" aria-current="page" href="#produto">Produto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" aria-current="page" href="#">O que é e.Aí Conecta</a>
+              <a class="nav-link text-white" aria-current="page" href="#sobre">O que é e.Aí Conecta</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
@@ -47,7 +48,7 @@
                 Login
               </a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="./login.html">Parceiro</a></li>
+                <li><a class="dropdown-item" href="login.html">Parceiro</a></li>
                 <hr class="dropdown-divider" />
                 <li><a class="dropdown-item" href="#">Cliente</a></li>
               </ul>
@@ -95,7 +96,7 @@
     </div>
   </header>
 
-  <header id="produto">
+  <section id="produto">
     <div class="container-fluid px-5">
       <div class="row">
         <h2 class="display-6 lh-1 mb-5 text-center text-uppercase">
@@ -113,7 +114,9 @@
                 bactérias e fungos por meio da desinfecção robótica
                 inteligente
               </p>
-              <a href="#" class="btn btn-primary text-uppercase">Conheça nosso robô de desinfecção.</a>
+              <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-primary text-uppercase">Conheça nosso robô de desinfecção</a>
+              </div>
             </div>
           </div>
           <!-- Card -->
@@ -129,7 +132,9 @@
                 Elevar e garantir, por meio da Inteligência Artificial, os padrões de qualidade nas análises de odores,
                 oferecendo portabilidade, conectividade e velocidade nos resultados
               </p>
-              <a href="#" class="btn btn-primary text-uppercase">Conheça o nariz inteligente</a>
+              <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-primary text-uppercase">Conheça o nariz inteligente</a>
+              </div>
             </div>
           </div>
         </div>
@@ -143,15 +148,17 @@
                 Reconhecimento de padrões com Inteligência Artificial para processamento de imagens e contagem
                 automática de objetos
               </p>
-              <a href="#" class="btn btn-primary">Conheça o contador inteligente</a>
+              <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-primary text-uppercase">Conheça o contador inteligente</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <header id="sobre">
+  <section id="sobre">
     <div class="container-fluid px-5">
       <div class="row gx-5 align-items-center">
         <div class="col-lg-4">
@@ -174,7 +181,157 @@
           </div>
         </div>
       </div>
-  </header>
+  </section>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#f25116" fill-opacity="1"
+      d="M0,256L40,224C80,192,160,128,240,138.7C320,149,400,235,480,261.3C560,288,640,256,720,224C800,192,880,160,960,154.7C1040,149,1120,171,1200,192C1280,213,1360,235,1400,245.3L1440,256L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+    </path>
+  </svg>
+
+  <section id="planos">
+    <main class="flex-shrink-0">
+      <!-- Pricing section-->
+      <section class="bg-light py-5">
+        <div class="container px-5 my-5">
+          <div class="text-center mb-5">
+            <h1 class="fw-bolder">Planos Premios</h1>
+            <p class="lead fw-normal text-muted mb-0">Faça mais com o Plano Premio</p>
+          </div>
+          <div class="row gx-5 justify-content-center">
+            <!-- Pricing card free-->
+            <div class="col-lg-6 col-xl-4">
+              <div class="card mb-5 mb-xl-0">
+                <div class="card-body p-5">
+                  <div class="small text-uppercase fw-bold text-muted">Free</div>
+                  <div class="mb-3">
+                    <span class="display-4 fw-bold">R$0</span>
+                    <span class="text-muted">/ mês.</span>
+                  </div>
+                  <ul class="list-unstyled mb-4">
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      <strong>3 fucionários</strong>
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      Limitado a 1 Robô
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      Avaliação dos clientes
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      Controle de fucionários
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      Suporte
+                    </li>
+                    <li class="mb-2 text-muted">
+                      <i class="bi bi-x"></i>
+                      Auto promoção
+                    </li>
+
+                  </ul>
+                  <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Choose plan</a></div>
+                </div>
+              </div>
+            </div>
+            <!-- Pricing card pro-->
+            <div class="col-lg-6 col-xl-4">
+              <div class="card mb-5 mb-xl-0">
+                <div class="card-body p-5">
+                  <div class="small text-uppercase fw-bold">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    Plano Anual
+                  </div>
+                  <div class="mb-3">
+                    <span class="display-4 fw-bold">R$80</span>
+                    <span class="text-muted">/mês.</span>
+                  </div>
+                  <ul class="list-unstyled mb-4">
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      <strong>Fucionário Ilimitado</strong>
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      + Robôs
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      Avaliação de clientes
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      Community access
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      Suporte
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      Auto Promoção
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      12 mêses de fidelidade economia de 240,00
+                    </li>
+                  </ul>
+                  <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                </div>
+              </div>
+            </div>
+            <!-- Pricing card pro-->
+            <div class="col-lg-6 col-xl-4">
+              <div class="card mb-5 mb-xl-0">
+                <div class="card-body p-5">
+                  <div class="small text-uppercase fw-bold">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    Plano Mensal
+                  </div>
+                  <div class="mb-3">
+                    <span class="display-4 fw-bold">R$100</span>
+                    <span class="text-muted">/mês.</span>
+                  </div>
+                  <ul class="list-unstyled mb-4">
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      <strong>Fucionário Ilimitado</strong>
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      + Robôs
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      Avaliação de clientes
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      Community access
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      Suporte
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check text-primary"></i>
+                      Auto Promoção
+                    </li>
+                  </ul>
+                  <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Choose plan</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </section>
 
   <div class="container-fluid footer">
     <footer class="pt-5">
