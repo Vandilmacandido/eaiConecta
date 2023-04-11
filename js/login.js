@@ -10,7 +10,7 @@ form.addEventListener('submit', (event) => {
     "senha": senha
   };
 
-  fetch('http://localhost:3000/loginempresa', {
+  fetch('http://localhost:3000/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
