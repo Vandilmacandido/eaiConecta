@@ -53,4 +53,10 @@
         color: #2A438C;
         
       }
+	  
+.inputError {
+  background-color: #ffcccc; /* muda a cor de fundo para vermelho claro */
+  border-color: #ff0000; /* muda a cor da borda para vermelho */
+}
+
 
