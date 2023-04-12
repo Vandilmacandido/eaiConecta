@@ -1,8 +1,7 @@
     const form = document.querySelector('.user');
     form.addEventListener('submit', (event) => {
       event.preventDefault(); // previne o envio padrão do formulário
-       alert("teste")
-
+      
       const cnpj = document.getElementById('inputCnpj').value;
       const nomeEmpresarial = document.getElementById('inputNomeEmpresarial').value;
       const nomeFantasia = document.getElementById('inputNomeFantasia').value;
@@ -35,7 +34,7 @@
         "senha": senha
       };
 
-      fetch('http://localhost:3000/empresa', {
+      fetch('http://localhost:3000/empresa/cadastro', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -44,10 +43,10 @@
       })
       .then(response => {
         if (response.ok) {
-          alert('Livro cadastrado com sucesso!');
+          alert('Cadastrado realizado com sucesso!');
           form.reset();
         } else {
-          throw new Error('Erro ao cadastrar livro!');
+          throw new Error('Erro ao cadastrar a empresa!');
         }
       })
       .catch(error => console.error(error));
