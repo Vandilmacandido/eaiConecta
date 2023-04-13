@@ -19,7 +19,7 @@ btn.addEventListener('click', (event) => {
   const telefone = document.getElementById('inputTelefone').value;
   const sexo = document.getElementById('inputSexo').value;
   const email = document.getElementById('inputEmail').value;
-  const senha1 = document.getElementById('inputSenha1').value;
+  const senha = document.getElementById('inputSenha1').value;
   const senha2 = document.getElementById('inputSenha2').value;
 
   // Validação do NOME
@@ -82,7 +82,7 @@ btn.addEventListener('click', (event) => {
   // Validação das senhas
   const inputSenha1 = document.getElementById('inputSenha1');
   const inputSenha2 = document.getElementById('inputSenha2');
-  if (senha1 !== senha2) {
+  if (senha !== senha2) {
     inputSenha1.classList.add('inputError');
     inputSenha2.classList.add('inputError');
     return;
@@ -92,23 +92,22 @@ btn.addEventListener('click', (event) => {
   }
 
   // Verifica se todos os campos estão preenchidos
-  if (!nome || !rg || !cpf || !telefone || !sexo || !email || !senha1 || !senha2) {
+  if (!nome || !rg || !cpf || !telefone || !sexo || !email || !senha || !senha2) {
     alert('Por favor, preencha todos os campos.');
     return;
   }
 
   const data = {
-    "nome": nome ,
-    "rg": rg,
-    "cpf": cpf,
-    "telefone": telefone,
-    "sexo": sexo,
-    "email": email,
-    "senha1": senha1,
-    "senha2": senha2
+    "Nome": nome ,
+    "RG": rg,
+    "CPF": cpf,
+    "Telefone": telefone,
+    "Sexo": sexo,
+    "Email": email,
+    "Senha": senha
   };
 
-  fetch('http://localhost:3000/empresa/cadastrofuncionario', {
+  fetch('http://localhost:3000/funcionario/cadastro', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

@@ -6,8 +6,8 @@ form.addEventListener('submit', (event) => {
   const senha = document.getElementById('inputSenha').value;
 
   const data = {
-    "email": email,
-    "senha": senha
+    "Email": email,
+    "Senha": senha
   };
 
   fetch('http://localhost:3000/empresa/login', {

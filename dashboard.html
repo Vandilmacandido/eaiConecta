@@ -1053,7 +1053,7 @@
 
             const listaLivros = document.getElementById("corpoTabelaFunc");
 
-            fetch("http://localhost:3000/empresa/funcionario")
+            fetch("http://localhost:3000/funcionario")
                 .then((response) => response.json())
                 .then((data) => {
                     if (Array.isArray(data)) {

@@ -18,20 +18,20 @@
       const senha = document.getElementById('inputSenha').value;
 
       const data = {
-        "cnpj": cnpj ,
-        "nomeEmpresarial": nomeEmpresarial,
-        "nomeFantasia": nomeFantasia,
-        "porte": porte,
-        "cep": cep,
-        "logradouro": logradouro,
-        "numero": numero,
-        "complemento": complemento,
-        "bairro": bairro,
-        "municipio": municipio,
-        "uf": uf,
-        "telefone": telefone,
-        "email": email,
-        "senha": senha
+        "CNPJ": cnpj ,
+        "Nome_empresarial": nomeEmpresarial,
+        "Nome_fantasia": nomeFantasia,
+        "Porte": porte,
+        "CEP": cep,
+        "Logradouro": logradouro,
+        "Numero": numero,
+        "Complemento": complemento,
+        "Bairro": bairro,
+        "Municipio": municipio,
+        "UF": uf,
+        "Telefone": telefone,
+        "Email": email,
+        "Senha": senha
       };
 
       fetch('http://localhost:3000/empresa/cadastro', {
