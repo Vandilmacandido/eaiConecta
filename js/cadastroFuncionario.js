@@ -1,15 +1,6 @@
 const form = document.querySelector('.funcionario');
 const btn = document.querySelector('.cadastroFuncionario');
 
-// const inputNome = document.getElementById('inputNome');
-// inputNome.addEventListener('blur', () => {
-//   if (inputNome.value === '') {
-//     inputNome.classList.add('inputError');
-//   } else {
-//     inputNome.classList.remove('inputError');
-//   }
-// });
-
 btn.addEventListener('click', (event) => {
   event.preventDefault(); // previne o envio padrão do formulário
   
