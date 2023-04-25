@@ -26,8 +26,8 @@
   # Main
   --------------------------------------------------------------*/
   #main {
-    margin-top: 5px;
-    padding: 20px 30px;
+    margin-top: 0px;
+    padding: 0px 30px;
     transition: all 0.3s;
   }
   
@@ -50,20 +50,32 @@
     font-weight: 600;
     color: #4154f1;
   }
-  
 
+    
+.ativado {
+  background-color: #f16a38 !important;
+  border-color: #f5e7e7a8 !important;
+  color: #fff;
+}
+
+.ativado:focus {
+  box-shadow: 0 0 0 0.2rem rgb(242 81 22 / 50%) !important;
+}
+
+#wrapper #content-wrapper #content {
+  flex: 0 auto;
+} 
   
+  
+@media (min-width: 1200px) {
  
-  
-  
-  @media (min-width: 1200px) {
-  
-    #main,
-    #footer {
-      margin-left: 5px;
-    }
-  }
-  
+  #main,
+  #footer {
+    margin-left: 5px;
+   }
+}
+
+
   
   
   
