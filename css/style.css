@@ -62,6 +62,304 @@ body {
     height: 100%;
 }
 
+
+.section-header h3 {
+    font-size: 36px;
+    color: #ed3c0d;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+}
+
+#contact {
+    padding: 17px 0 60px 0;
+    overflow: hidden;
+  }
+  
+  #contact .section-header {
+    padding-bottom: 30px;
+  }
+  
+  #contact .contact-about h3 {
+    font-size: 36px;
+    margin: 0 0 10px 0;
+    padding: 0;
+    line-height: 1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+  }
+  
+  #contact .contact-about p {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "Montserrat", sans-serif;
+    color: #888;
+  }
+  
+  #contact .social-links {
+    padding-bottom: 20px;
+  }
+  
+  #contact .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #fff;
+    color: var(--primary-color);
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+    border: 1px solid #F25116;
+  }
+  
+  #contact .social-links a:hover {
+    background: #F25116;
+    color: #fff;
+  }
+  
+  #contact .info {
+    color: #283d50;
+  }
+  
+  #contact .info i {
+    font-size: 32px;
+    color: #F25116;
+    float: left;
+    line-height: 0;
+  }
+  
+  #contact .info p {
+    padding: 0 0 10px 36px;
+    line-height: 28px;
+    font-size: 14px;
+    color: var(--paragraph-dark);
+  }
+  
+  #contact .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+  }
+  
+  #contact .php-email-form .error-message br+br {
+    margin-top: 25px;
+  }
+  
+  #contact .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+  }
+  
+  #contact .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  #contact .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
+    animation: animate-loading 1s linear infinite;
+  }
+  
+  #contact .php-email-form input,
+  #contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+  }
+  
+  #contact .php-email-form input:focus,
+  #contact .php-email-form textarea:focus {
+    border-color: #e9541e;
+  }
+  
+  #contact .php-email-form input {
+    padding: 10px 15px;
+  }
+  
+  #contact .php-email-form textarea {
+    padding: 12px 15px;
+  }
+  
+  #contact .php-email-form button[type=submit] {
+    background: #e9541e;
+    border: 0;
+    border-radius: 20px;
+    padding: 8px 30px;
+    color: #fff;
+    transition: 0.3s;
+    font-size: 16px;
+  }
+  
+  #contact .php-email-form button[type=submit]:hover {
+    background: #e9541e;
+    cursor: pointer;
+  }
+
+  .my-3 {
+    margin-top: 15px;
+  }
+
+  .loading,
+  .error-message,
+  .sent-message {
+       min-height: 30px;
+    display: none;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .loading {
+    color: orange;
+  }
+
+  .error-message {
+    color: red;
+  }
+
+  .sent-message {
+    color: green;
+  }
+  
+  @keyframes animate-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  #whats {
+    position: fixed;
+    bottom: 80px;
+    right: 10px;
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: 200ms;
+    visibility: hidden;
+  }
+  
+  #whats img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  #whats.active {
+    transform: translateX(0);
+    visibility: visible;
+  }
+  
+  #whats:hover .tooltip {
+    display: block;
+  }
+  
+  .delayed-visibility {
+    animation-name: delayed-visibility;
+    animation-duration: 0.5s;
+    animation-delay: 1s; /* Delay in seconds before the div appears */
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes delayed-visibility {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  
+  .float {
+    animation-name: float;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes float {
+    from {
+      transform: translate3d(0, 0, 0);
+      filter: brightness(100%);
+    }
+    to {
+      transform: translate3d(0, 15px, 0);
+      filter: brightness(150%);
+    }
+  }
+  
+  .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 60px;
+    display: none;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+  }
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #e9541e;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #0000;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 .footer {
     background-color: #f25116;
     color: #fff;
