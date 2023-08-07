@@ -62,3 +62,24 @@ nav{
   text color: #2A438C;
 }
 
+.contract-message {
+  width: 200px;
+  position: fixed;
+  bottom: 4rem;
+  right: 1.1rem;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.close-contract-message {
+  margin-top: 10px;
+  background-color: white;
+  color: red;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+

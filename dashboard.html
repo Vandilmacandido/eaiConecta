@@ -296,6 +296,11 @@
                                     <ul class="list-group list-group-flush">
                                         <div class="row">
                                             <div class="col-md-6">
+                                                <li class="list-group-item" style="display: none;">
+                                                    <h2>ID</h2>
+                                                    <p></p>
+                                                </li>
+
                                                 <li class="list-group-item">
                                                     <h2>Cliente</h2>
                                                     <p></p>
@@ -349,9 +354,6 @@
                                     <select class="form-select col-12 col-md-2 bg-dark text-white select-funcionario"
                                         aria-label="Default select example">
                                         <option value="" selected>Selecione Funcionário</option>
-                                        <option value="1">Funcionário 1</option>
-                                        <option value="2">Funcionário 2</option>
-                                        <option value="3">Funcionário 3</option>
                                     </select>
                                     <button type="button" class="btn btn-primary col-12 col-md-1 btn-aceitar-pedido"
                                         disabled>Aceitar</button>
@@ -590,7 +592,7 @@
                         </div>
 
                         <div class="col-lg-12 mb-4">
-
+                            <h1 class="h3 mb-2 text-gray-800">Lista de Funcionário</h1>
                             <!-- LISTA FUNCIONÁRIO -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
@@ -599,8 +601,8 @@
                                             class="m-0 h4 col-sm-3 text-center col-12 font-weight-bold text-primary align-items-center">
                                             Funcionários
                                         </h6>
-                                        <button type="button" class="btn col-sm-3 col-12" data-toggle="modal"
-                                            data-target="#cadastroFuncionario">
+                                        <button type="button" class="btn col-sm-3 col-12 btn-add-funcionario"
+                                            data-toggle="modal" data-target="#cadastroFuncionario" disabled>
                                             <i class="fas fa-solid fa-user-plus m-1"
                                                 style="color: #ff5722; font-size: 2rem;"></i>
                                         </button>
@@ -672,6 +674,11 @@
     </div>
     <!-- End of Page Wrapper -->
 
+    <div class="contract-message" id="contractMessage" style="display: none;">
+        <p>Atenção! Algumas funcionalidades do site não estarão disponíveis até que você assine o contrato.</p>
+        <button class="close-contract-message" onclick="fecharMensagem()">Fechar</button>
+    </div>
+
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
@@ -697,11 +704,37 @@
         </div>
     </div>
 
-    <Script>
+    <!-- Modal de contrato -->
+    <div class="modal fade" id="contractModal" tabindex="-1" role="dialog" aria-labelledby="contractModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-success" id="contractModalLabel">Confirmação de Cadastro</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Parabéns! Você recebeu um contrato por email para assinar.</p>
+                    <p>Após assinar o contrato, você terá acesso a todas as funcionalidades do site.</p>
+                    <p>Verifique a sua caixa de entrada e siga as instruções no email para assinar o contrato.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+    <script>
+        // Exibe o modal quando a página é carregada
+        window.addEventListener('load', function () {
+            $('#contractModal').modal('show');
+        });
+    </script>
 
-    </Script>
 
     <script src="./js/cadastroFuncionario.js"></script>
     <script src="./js/dashboard.js"></script>

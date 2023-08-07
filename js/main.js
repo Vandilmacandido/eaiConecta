@@ -132,7 +132,7 @@ form.addEventListener('submit', (event) => {
 
   // ... Código de envio do formulário (mantido igual) ...
 
-  fetch('https://eaiconecta.onrender.com/email/contato', {
+  fetch('http://localhost:3000/email/contato', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -161,6 +161,9 @@ form.addEventListener('submit', (event) => {
       submitButton.disabled = false; // Habilitar o botão em caso de erro
       const errorMessage = document.querySelector('.error-message');
       errorMessage.style.display = 'block';
+      setTimeout(() => {
+        errorMessage.style.display = 'none';
+        }, 3000); 
       const sentMessage = document.querySelector('.sent-message');
       sentMessage.style.display = 'none';
       console.error(error);

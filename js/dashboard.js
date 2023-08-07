@@ -1,143 +1,182 @@
 // INICIO LISTAR PEDIDO
 
-const servicos = [
-    {
-      nome: "Brilux",
-      data: "27/05/2023",
-      serviço: "Desinfecção",
-      detalhes: {
-        nome: "Brilux",
-        servico:"Desinfecção",
-        data: "27/05/2023",
-        hora: "13:00",
-        local: "Galpão",
-        endereco: "Rua Cassimiro Abreu S/N (Pe 15 Km 14), Paulista, PE, 53403-480",
-        telefone: "(11) 1234-5678",
-        tamanho: "250 m²",
-        valorServico: "R$ 1250,00",
-        valorReceber: "R$ 875,00",
-      }
-    },
-    {
-        nome: "LaboTech",
-        data: "30/05/2023",
-        serviço: "Desinfecção",
-        detalhes: {
-        nome: "LaboTech",
-        servico:"Desinfecção",
-        data: "30/05/2023",
-        hora: "10:00",
-        local: "Escritório",
-        endereco: "Rua da Guia, 204, Recife Antigo, Recife, PE, 50030-360",
-        telefone: "(11) 9876-5432",
-        tamanho: "150 m²",
-        valorServico: "R$ 750,00",
-        valorReceber: "R$ 525,00",
-        }
-        },
-        {
-        nome: "Fernando Henrique",
-        data: "02/06/2023",
-        serviço: "Desinfecção",
-        detalhes: {
-        nome: "Fernando Henrique",
-        servico:"Desinfecção",
-        data: "02/06/2023",
-        hora: "14:00",
-        local: "Loja",
-        endereco: "Av. Rio Branco 155, Recife, PE, 50030",
-        telefone: "(11) 2345-6789",
-        tamanho: "80 m²",
-        valorServico: "R$ 400,00",
-        valorReceber: "R$ 280,00",
-        }
-        },
-        {
-        nome: "JP Supermercado",
-        data: "05/06/2023",
-        serviço: "Desinfecção",
-        detalhes: {
-            nome: "JP Supermercado",
-            servico:"Desinfecção",
-            data: "05/06/2023",
-            hora: "09:00",
-            local: "Supermercado",
-            endereco: "Av. Conselheiro Aguiar, 1472 - sala 606, Boa Viagem, Recife, PE, 51011-031",
-            telefone: "(11) 3456-7890",
-            tamanho: "500 m²",
-            valorServico: "R$ 2500,00",
-            valorReceber: "R$ 1750,00",
-        }
-        },
-        {
-        nome: "Roberto Santos",
-        data: "05/08/2023",
-        serviço: "Desinfecção",
-        detalhes: {
-            nome: "Roberto Santos",
-            servico: "Desinfecção",
-            data: "05/08/2023",
-            hora: "11:00",
-            local: "Consultório",
-            endereco: "Rua: Duque de caxias N. 16 Bairo: Boa vista - Caruaru - PE",
-            telefone: "(31) 4567-8901",
-            tamanho: "60 m²",
-            valorServico: "R$ 300,00",
-            valorReceber: "R$ 210,00",
-        }
-        },
+// const servicos = [
+//     {
+//       nome: "Brilux",
+//       data: "27/05/2023",
+//       serviço: "Desinfecção",
+//       detalhes: {
+//         nome: "Brilux",
+//         servico:"Desinfecção",
+//         data: "27/05/2023",
+//         hora: "13:00",
+//         local: "Galpão",
+//         endereco: "Rua Cassimiro Abreu S/N (Pe 15 Km 14), Paulista, PE, 53403-480",
+//         telefone: "(11) 1234-5678",
+//         tamanho: "250 m²",
+//         valorServico: "R$ 1250,00",
+//         valorReceber: "R$ 875,00",
+//       }
+//     },
+//     {
+//         nome: "LaboTech",
+//         data: "30/05/2023",
+//         serviço: "Desinfecção",
+//         detalhes: {
+//         nome: "LaboTech",
+//         servico:"Desinfecção",
+//         data: "30/05/2023",
+//         hora: "10:00",
+//         local: "Escritório",
+//         endereco: "Rua da Guia, 204, Recife Antigo, Recife, PE, 50030-360",
+//         telefone: "(11) 9876-5432",
+//         tamanho: "150 m²",
+//         valorServico: "R$ 750,00",
+//         valorReceber: "R$ 525,00",
+//         }
+//         },
+//         {
+//         nome: "Fernando Henrique",
+//         data: "02/06/2023",
+//         serviço: "Desinfecção",
+//         detalhes: {
+//         nome: "Fernando Henrique",
+//         servico:"Desinfecção",
+//         data: "02/06/2023",
+//         hora: "14:00",
+//         local: "Loja",
+//         endereco: "Av. Rio Branco 155, Recife, PE, 50030",
+//         telefone: "(11) 2345-6789",
+//         tamanho: "80 m²",
+//         valorServico: "R$ 400,00",
+//         valorReceber: "R$ 280,00",
+//         }
+//         },
+//         {
+//         nome: "JP Supermercado",
+//         data: "05/06/2023",
+//         serviço: "Desinfecção",
+//         detalhes: {
+//             nome: "JP Supermercado",
+//             servico:"Desinfecção",
+//             data: "05/06/2023",
+//             hora: "09:00",
+//             local: "Supermercado",
+//             endereco: "Av. Conselheiro Aguiar, 1472 - sala 606, Boa Viagem, Recife, PE, 51011-031",
+//             telefone: "(11) 3456-7890",
+//             tamanho: "500 m²",
+//             valorServico: "R$ 2500,00",
+//             valorReceber: "R$ 1750,00",
+//         }
+//         },
+//         {
+//         nome: "Roberto Santos",
+//         data: "05/08/2023",
+//         serviço: "Desinfecção",
+//         detalhes: {
+//             nome: "Roberto Santos",
+//             servico: "Desinfecção",
+//             data: "05/08/2023",
+//             hora: "11:00",
+//             local: "Consultório",
+//             endereco: "Rua: Duque de caxias N. 16 Bairo: Boa vista - Caruaru - PE",
+//             telefone: "(31) 4567-8901",
+//             tamanho: "60 m²",
+//             valorServico: "R$ 300,00",
+//             valorReceber: "R$ 210,00",
+//         }
+//         },
     
-  ];
+//   ];
 
+
+  // function preencherTabelaServicos() {
+  //   const tabelaServicos = document.getElementById("tabela-servicos");
+    
+  //   for (let servico of servicos) {
+  //     const novaLinha = document.createElement("tr");
+  //     novaLinha.innerHTML = `
+  //       <td>${servico.nome}</td>
+  //       <td>${servico.data}</td>
+  //       <td>${servico.serviço}</td>
+  //       <td>
+  //       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDetalhesPedidos" onclick="mostrarDetalhes('${encodeURIComponent(JSON.stringify(servico.detalhes))}')">Detalhes</button>
+  //       </td>
+  //     `;
+      
+  //     tabelaServicos.appendChild(novaLinha);
+  //     console.log(JSON.stringify(servico.detalhes))
+  //   }
+
+  // }
+
+
+// const api = 'https://eaiconecta-api.onrender.com';
+const codigoEmpresa = localStorage.getItem('CodEmpresa');
+const nomedaEmpresa = localStorage.getItem('Nome_Fantasia');
+const verificacaoContrato = localStorage.getItem('verificacaoContrato');
+const verificacao = localStorage.getItem('Verificacao');
+// const verificacao = localStorage.setItem('Verficacao');
+const btnAceitarPedido = document.querySelector(".btn-aceitar-pedido");
+console.log('Codigo da empresa' + codigoEmpresa)
+console.log('Contrato' + verificacaoContrato)
+console.log('Verificação' + verificacao);
+
+btnAceitarPedido.addEventListener("click", aceitarPedido);
 
   function preencherTabelaServicos() {
     const tabelaServicos = document.getElementById("tabela-servicos");
-    
-    for (let servico of servicos) {
-      const novaLinha = document.createElement("tr");
-      novaLinha.innerHTML = `
-        <td>${servico.nome}</td>
-        <td>${servico.data}</td>
-        <td>${servico.serviço}</td>
-        <td>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDetalhesPedidos" onclick="mostrarDetalhes('${encodeURIComponent(JSON.stringify(servico.detalhes))}')">Detalhes</button>
-        </td>
-      `;
-      
-      tabelaServicos.appendChild(novaLinha);
-      console.log(JSON.stringify(servico.detalhes))
-    }
 
+    tabelaServicos.innerHTML = "";
+  
+    fetch(`${api}/agendamento`)
+      .then(response => response.json())
+      .then(data => {
+        for (let servico of data.response) {
+          const novaLinha = document.createElement("tr");
+          novaLinha.innerHTML = `
+            <td>${servico.Nome}</td>
+            <td>${new Date(servico.DataServico).toLocaleDateString()}</td>
+            <td>${servico.InfoAdicionais}</td>
+            <td>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDetalhesPedidos" onclick="mostrarDetalhes('${encodeURIComponent(JSON.stringify(servico))}')">Detalhes</button>
+            </td>
+          `;
+  
+          tabelaServicos.appendChild(novaLinha);
+        }
+      })
+      .catch(error => console.log(error));
   }
 
 
-function mostrarDetalhes(servicoDetalhes) {
+  function mostrarDetalhes(servicoDetalhes) {
     const detalhes = JSON.parse(decodeURIComponent(servicoDetalhes));
-    const modalCliente = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(1) li:nth-child(1) p");
-    const modalServico = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(1) li:nth-child(2) p");
-    const modalData = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(1) li:nth-child(3) p");
-    const modalHora = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(1) li:nth-child(4) p");
-    const modalLocal = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(1) li:nth-child(5) p");
+    const modalCodigo = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(1) li:nth-child(1) p");
+    const modalCliente = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(1) li:nth-child(2) p");
+    const modalServico = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(1) li:nth-child(3) p");
+    const modalData = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(1) li:nth-child(4) p");
+    const modalHora = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(1) li:nth-child(5) p");
+    const modalLocal = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(1) li:nth-child(6) p");
     const modalEndereco = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(2) li:nth-child(1) p");
     const modalTelefone = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(2) li:nth-child(2) p");
     const modalArea = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(2) li:nth-child(3) p");
     const modalValorServico = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(2) li:nth-child(4) p");
     const modalValorReceber = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(2) li:nth-child(5) p");
-  
-    modalCliente.textContent = detalhes.nome;
-    modalServico.textContent = detalhes.servico;
-    modalData.textContent = detalhes.data;
-    modalHora.textContent = detalhes.hora;
-    modalLocal.textContent = detalhes.local;
-    modalEndereco.textContent = detalhes.endereco;
-    modalTelefone.textContent = detalhes.telefone;
-    modalArea.textContent = detalhes.tamanho;
-    modalValorServico.textContent = detalhes.valorServico;
-    modalValorReceber.textContent = detalhes.valorReceber;
+
+    modalCodigo.textContent = detalhes.CodAgendamento;
+    modalCliente.textContent = detalhes.Nome;
+    modalServico.textContent = detalhes.InfoAdicionais;
+    modalData.textContent = `${new Date(detalhes.DataServico).toLocaleDateString()}`;
+    modalHora.textContent = detalhes.HoraServico;
+    modalLocal.textContent = detalhes.LocalServico;
+    modalEndereco.textContent = `${detalhes.Lougradouro} - Nº${detalhes.Numero} - ${detalhes.Bairro}`;
+    modalTelefone.textContent = '(81) 99999-9999';
+    modalArea.textContent = detalhes.MedidasLocal;
+    modalValorServico.textContent = detalhes.Valor;
+    modalValorReceber.textContent = `${detalhes.Valor * 0.7},00`;
   }
   
-preencherTabelaServicos();
-
 // FIM LISTAR PEDIDO
 
 
@@ -192,11 +231,11 @@ const inputFile = document.querySelector("#picture__input");
 
 
 // INICIO MOSTRAR LISTA DE FUNCIONÁRIO CADASTRADO 
-const adicionarFuncionario = () => {
+const adicionarFuncionario = async () => {
 
   const listaLivros = document.getElementById("corpoTabelaFunc");
 
-  fetch("http://localhost:3000/funcionario")
+  await fetch(`${api}/funcionario/codigo/${codigoEmpresa}`)
       .then((response) => response.json())
       .then((data) => {
           if (Array.isArray(data)) {
@@ -256,7 +295,87 @@ const adicionarFuncionario = () => {
       })
       .catch((error) => console.error(error));
 };
-
-adicionarFuncionario();
-
 // FIM MOSTRAR LISTA DE FUNCIONÁRIO CADASTRADO 
+
+// INICIO MOSTRAR NO CAMPO SELECTED A LISTA DE FUNCIONÁRIO 
+const selectFuncionarios = () => {
+
+  const selectFuncionario = document.querySelector('.select-funcionario');
+  fetch(`${api}/funcionario/codigo/${codigoEmpresa}`)
+    .then(response => response.json())
+    .then(data => {
+      const funcionarios = data.response;
+      selectFuncionario.innerHTML = '';
+      selectFuncionario.innerHTML = '<option value="" selected>Selecione Funcionário</option>';
+      // Itera sobre o array de funcionários e cria uma opção para cada um
+      funcionarios.forEach(funcionario => {
+        const option = document.createElement('option');
+        option.value = funcionario.CodFuncionario;
+        option.textContent = funcionario.Nome;
+        selectFuncionario.appendChild(option);
+      });
+    });
+
+}
+// FIM MOSTRAR NO CAMPO SELECTED A LISTA DE FUNCIONÁRIO 
+
+function aceitarPedido() {
+  const selectFuncionario = document.querySelector(".select-funcionario");
+  const codFuncionario = selectFuncionario.value;
+  const codAgendamento= document.querySelector('#modalDetalhesPedidos .modal-body .col-md-6:nth-child(1) li:nth-child(1) p').textContent;
+  
+
+  const data = {
+    "CodFuncionario": codFuncionario,
+    "CodAgendamento": codAgendamento
+  };
+
+  console.log(data)
+
+  fetch(`${api}/agendamento/atribuir/${codAgendamento}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      alert('Pedido aceito!!')
+      preencherTabelaServicos();
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
+
+function fecharMensagem() {
+  // Oculta a mensagem de contrato não ativado ao clicar no botão "Fechar"
+  document.getElementById("contractMessage").style.display = "none";
+}
+
+
+
+function habilitarFuncionalidades() {
+  // Verifica se o contrato está ativado e a conta foi verificada
+  if (verificacaoContrato === '1' && verificacao === '1') {
+    const btnAceitarPedido = document.querySelector(".btn-add-funcionario");
+    btnAceitarPedido.removeAttribute("disabled");
+  } else {
+    // Caso contrário, desabilita o botão de aceitar pedido
+    const btnAceitarPedido = document.querySelector(".btn-add-funcionario");
+    btnAceitarPedido.setAttribute("disabled", true);
+    document.getElementById("contractMessage").style.display = "block";
+  }
+}
+
+if (verificacaoContrato === '1' && verificacao === '1') {
+  // Carrega a lista de funcionários somente se o contrato estiver ativado e a conta estiver verificada
+  selectFuncionarios();
+  adicionarFuncionario();
+  preencherTabelaServicos();
+}
+
+habilitarFuncionalidades();
+

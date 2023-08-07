@@ -152,6 +152,9 @@ const servicosAbertos = [
         <td>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalServicosAbertos" onclick="mostrarDetalhes('${encodeURIComponent(JSON.stringify(servico.detalhes))}')">Detalhes</button>
         </td>
+        <td class="text-center">
+        <button type="button" class="btn btn-success" onclick="abrirLinkWhatsApp()">Agendar</button>
+        </td>
       `;
       
       tabelaServicos.appendChild(novaLinha);
@@ -263,6 +266,19 @@ const servicosAbertos = [
   
     // Adiciona a classe .ativado apenas ao botão clicado
     button.classList.add("ativado");
+  }
+
+
+
+  function abrirLinkWhatsApp() {
+    // Substitua 'NUMERO_DO_TELEFONE' pelo número de telefone para o qual deseja enviar a mensagem
+    var numeroTelefone = '5581991973695';
+    
+    // Crie o link do WhatsApp
+    var linkWhatsApp = 'https://api.whatsapp.com/send?phone=' + encodeURIComponent(numeroTelefone);
+    
+    // Abra o link em uma nova janela
+    window.open(linkWhatsApp, '_blank');
   }
   
   
