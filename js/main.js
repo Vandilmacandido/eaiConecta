@@ -132,7 +132,7 @@ form.addEventListener('submit', (event) => {
 
   // ... Código de envio do formulário (mantido igual) ...
 
-  fetch('http://localhost:3000/email/contato', {
+  fetch('https://eaiconecta-api.onrender.com/email/contato', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
