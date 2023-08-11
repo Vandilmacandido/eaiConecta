@@ -1,6 +1,6 @@
 let situacao,nomeEmpresarial, nomeFantasia, porte, logradouro, numero, complemento, cep, bairro, municipio, uf, telefone;
 
-situacao = "T";
+situacao = "0";
 nomeEmpresarial = "T";
 nomeFantasia = "T";
 porte = "T";
@@ -14,7 +14,7 @@ uf = "T";
 telefone = "T";
 
 
-const api ='https://eaiconecta-api.onrender.com';
+const api ='https://eai-api-complementar.onrender.com';
 
 const form = document.querySelector('.user');
 const createAccountBtn = document.getElementById('createAccountButton'); // Seleciona o botão pelo ID

@@ -1,4 +1,4 @@
-const api ='https://eaiconecta-api.onrender.com';
+const api ='https://eai-api-complementar.onrender.com';
 const form = document.querySelector('.funcionario');
 const btn = document.querySelector('.cadastroFuncionario');
 const codEmpresa = localStorage.getItem('CodEmpresa');

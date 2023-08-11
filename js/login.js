@@ -1,4 +1,4 @@
-const api ='https://eaiconecta-api.onrender.com';
+const api ='https://eai-api-complementar.onrender.com';
 const form = document.querySelector('.userlogin');
 const enterAccountBtn = document.getElementById('enterAccountButton'); // Seleciona o botão pelo ID
 const loader = enterAccountBtn.querySelector("#loader"); // Seleciona o loader pelo ID
@@ -50,6 +50,7 @@ form.addEventListener('submit', (event) => {
   })
   .catch(error => {
     console.error(error);
+    alert('Ocorreu um erro!');
     enterAccountBtn.disabled = false; // Desabilita o botão durante o envio
     loader.style.display = "none";
     entrarContaSpan.style.display = "block";

@@ -118,36 +118,61 @@ const verificacaoContrato = localStorage.getItem('verificacaoContrato');
 const verificacao = localStorage.getItem('Verificacao');
 // const verificacao = localStorage.setItem('Verficacao');
 const btnAceitarPedido = document.querySelector(".btn-aceitar-pedido");
+const contractModal = document.getElementById('contractModal');
 console.log('Codigo da empresa' + codigoEmpresa)
 console.log('Contrato' + verificacaoContrato)
 console.log('Verificação' + verificacao);
 
 btnAceitarPedido.addEventListener("click", aceitarPedido);
 
-  function preencherTabelaServicos() {
-    const tabelaServicos = document.getElementById("tabela-servicos");
+// function preencherTabelaServicos() {
+//   const tabelaServicos = document.getElementById("tabela-servicos");
 
-    tabelaServicos.innerHTML = "";
+//   tabelaServicos.innerHTML = "";
   
-    fetch(`${api}/agendamento`)
-      .then(response => response.json())
-      .then(data => {
-        for (let servico of data.response) {
-          const novaLinha = document.createElement("tr");
-          novaLinha.innerHTML = `
-            <td>${servico.Nome}</td>
-            <td>${new Date(servico.DataServico).toLocaleDateString()}</td>
-            <td>${servico.InfoAdicionais}</td>
-            <td>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDetalhesPedidos" onclick="mostrarDetalhes('${encodeURIComponent(JSON.stringify(servico))}')">Detalhes</button>
-            </td>
-          `;
+//   fetch(`${api}/agendamento`)
+//     .then(response => response.json())
+//     .then(data => {
+//       for (let servico of data.response) {
+//         const novaLinha = document.createElement("tr");
+//         novaLinha.innerHTML = `
+//           <td>${servico.Nome}</td>
+//           <td>${new Date(servico.DataServico).toLocaleDateString()}</td>
+//           <td>${servico.InfoAdicionais}</td>
+//           <td>
+//             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDetalhesPedidos" onclick="mostrarDetalhes('${encodeURIComponent(JSON.stringify(servico))}')">Detalhes</button>
+//           </td>
+//        `;
+//         tabelaServicos.appendChild(novaLinha);
+//         }
+//       })
+//     .catch(error => console.log(error));
+// }
+
+
+function preencherTabelaServicos() {
+  const tabelaServicos = document.getElementById("tabela-servicos");
+
+  tabelaServicos.innerHTML = "";
   
-          tabelaServicos.appendChild(novaLinha);
+  fetch(`https://eai-api-complementar.onrender.com/agendamento`)
+    .then(response => response.json())
+    .then(data => {
+      for (let servico of data.response) {
+        const novaLinha = document.createElement("tr");
+        novaLinha.innerHTML = `
+          <td>${servico.nome}</td>
+          <td>${new Date(servico.data).toLocaleDateString()}</td>
+          <td>${servico.bairro}</td>
+          <td>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDetalhesPedidos" onclick="mostrarDetalhes('${encodeURIComponent(JSON.stringify(servico))}')">Detalhes</button>
+          </td>
+       `;
+        tabelaServicos.appendChild(novaLinha);
         }
       })
-      .catch(error => console.log(error));
-  }
+    .catch(error => console.log(error));
+}
 
 
   function mostrarDetalhes(servicoDetalhes) {
@@ -164,16 +189,16 @@ btnAceitarPedido.addEventListener("click", aceitarPedido);
     const modalValorServico = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(2) li:nth-child(4) p");
     const modalValorReceber = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(2) li:nth-child(5) p");
 
-    modalCodigo.textContent = detalhes.CodAgendamento;
-    modalCliente.textContent = detalhes.Nome;
+    modalCodigo.textContent = detalhes.id;
+    modalCliente.textContent = detalhes.nome;
     modalServico.textContent = detalhes.InfoAdicionais;
-    modalData.textContent = `${new Date(detalhes.DataServico).toLocaleDateString()}`;
-    modalHora.textContent = detalhes.HoraServico;
-    modalLocal.textContent = detalhes.LocalServico;
-    modalEndereco.textContent = `${detalhes.Lougradouro} - Nº${detalhes.Numero} - ${detalhes.Bairro}`;
-    modalTelefone.textContent = '(81) 99999-9999';
-    modalArea.textContent = detalhes.MedidasLocal;
-    modalValorServico.textContent = detalhes.Valor;
+    modalData.textContent = `${new Date(detalhes.data).toLocaleDateString()}`;
+    modalHora.textContent = detalhes.horario;
+    modalLocal.textContent = detalhes.bairro;
+    modalEndereco.textContent = `${detalhes.logradouro} - Nº${detalhes.numero} - ${detalhes.bairro}`;
+    modalTelefone.textContent = detalhes.telefone;
+    modalArea.textContent = detalhes.area;
+    modalValorServico.textContent = detalhes.valor;
     modalValorReceber.textContent = `${detalhes.Valor * 0.7},00`;
   }
   
@@ -251,7 +276,6 @@ const adicionarFuncionario = async () => {
               tbody.innerHTML = '';
               console.log(data)
               values.forEach((funcionario) => {
-                  console.log(funcionario[0].Nome);
                   const tam = funcionario.length
                   for (i = 0; i < tam; i++) {
                       const tr = document.createElement("tr");
@@ -330,7 +354,6 @@ function aceitarPedido() {
     "CodAgendamento": codAgendamento
   };
 
-  console.log(data)
 
   fetch(`${api}/agendamento/atribuir/${codAgendamento}`, {
     method: "PUT",
@@ -341,7 +364,6 @@ function aceitarPedido() {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       alert('Pedido aceito!!')
       preencherTabelaServicos();
     })
@@ -362,11 +384,12 @@ function habilitarFuncionalidades() {
   if (verificacaoContrato === '1' && verificacao === '1') {
     const btnAceitarPedido = document.querySelector(".btn-add-funcionario");
     btnAceitarPedido.removeAttribute("disabled");
+    contractModal.classList.remove('show'); 
   } else {
     // Caso contrário, desabilita o botão de aceitar pedido
-    const btnAceitarPedido = document.querySelector(".btn-add-funcionario");
     btnAceitarPedido.setAttribute("disabled", true);
     document.getElementById("contractMessage").style.display = "block";
+    contractModal.classList.add('show');
   }
 }
 

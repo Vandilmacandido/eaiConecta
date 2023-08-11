@@ -396,7 +396,7 @@ footer .loja-app a i{
     color: #fff;
 }
 
-
+/* Como Funciona */
 .section_our_solution .row {
   align-items: center;
 }
@@ -464,7 +464,7 @@ footer .loja-app a i{
 }
 
 .solution_card .solu_title h3 {
-  color: #212121;
+  color:#f25116;
   font-size: 1.3rem;
   margin-top: 13px;
   margin-bottom: 13px;
@@ -564,4 +564,41 @@ footer .loja-app a i{
     width: 80%;
     /* margin: 0 auto; */
   }
+}
+
+/* Barra de Loading ao enviar e-mail */
+
+ /* Estilos personalizados para o formulário */
+
+ .my-3 {
+  /* Espaçamento entre os elementos de feedback */
+  margin-top: 15px;
+}
+
+.loading,
+.error-message,
+.sent-message {
+  /* Defina uma altura mínima para garantir que o espaço esteja reservado para as mensagens */
+  min-height: 30px;
+  /* Estilos comuns para as mensagens */
+  display: none;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Estilo de mensagem de carregamento */
+.loading {
+  color: orange;
+  /* Ou qualquer cor que você preferir */
+}
+
+/* Estilo de mensagem de erro */
+.error-message {
+  color: red;
+}
+
+/* Estilo de mensagem de sucesso */
+.sent-message {
+  color: green;
 }
