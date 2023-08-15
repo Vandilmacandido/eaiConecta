@@ -138,29 +138,59 @@ const servicosAbertos = [
         
   ];
 
+  // function preencherTabelaServicosAbertos() {
+  //   const tabelaServicos = document.getElementById("tabela-servicos-abertos");
+    
+  //   for (let servico of servicosAbertos) {
+  //     const novaLinha = document.createElement("tr");
+  //     novaLinha.innerHTML = `
+  //       <td>${servico.nome}</td>
+  //       <td>${servico.data}</td>
+  //       <td>${servico.detalhes.hora}</td>
+  //       <td>${servico.serviço}</td>
+  //       <td>${servico.responsaveltecnico}</td>
+  //       <td>
+  //       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalServicosAbertos" onclick="mostrarDetalhes('${encodeURIComponent(JSON.stringify(servico.detalhes))}')">Detalhes</button>
+  //       </td>
+  //       <td class="text-center">
+  //       <button type="button" class="btn btn-success" onclick="abrirLinkWhatsApp()">Agendar</button>
+  //       </td>
+  //     `;
+      
+  //     tabelaServicos.appendChild(novaLinha);
+  //     console.log(JSON.stringify(servico.detalhes))
+  //   }
+
+  // }
+  const codigoEmpresa = localStorage.getItem('CodEmpresa');
+
   function preencherTabelaServicosAbertos() {
     const tabelaServicos = document.getElementById("tabela-servicos-abertos");
+  
+    tabelaServicos.innerHTML = "";
     
-    for (let servico of servicosAbertos) {
-      const novaLinha = document.createElement("tr");
-      novaLinha.innerHTML = `
-        <td>${servico.nome}</td>
-        <td>${servico.data}</td>
-        <td>${servico.detalhes.hora}</td>
-        <td>${servico.serviço}</td>
-        <td>${servico.responsaveltecnico}</td>
-        <td>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalServicosAbertos" onclick="mostrarDetalhes('${encodeURIComponent(JSON.stringify(servico.detalhes))}')">Detalhes</button>
-        </td>
-        <td class="text-center">
-        <button type="button" class="btn btn-success" onclick="abrirLinkWhatsApp()">Agendar</button>
-        </td>
-      `;
-      
-      tabelaServicos.appendChild(novaLinha);
-      console.log(JSON.stringify(servico.detalhes))
-    }
-
+    fetch(`https://eai-api-complementar.onrender.com/agendamento/aberto/${codigoEmpresa}`)
+      .then(response => response.json())
+      .then(data => {
+        for (let servico of data.response) {
+          console.log(servico)
+          const novaLinha = document.createElement("tr");
+          novaLinha.innerHTML = `
+            <td>${servico.cliente_nome}</td>
+            <td>${new Date(servico.data).toLocaleDateString()}</td>
+            <td>${servico.horario}</td>
+            <td>${servico.funcionario_nome}</td>
+            <td>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalServicosAbertos" onclick="mostrarDetalhes('${encodeURIComponent(JSON.stringify(servico))}')">Detalhes</button>
+            </td>
+            <td class="text-center">
+              <button type="button" class="btn btn-success" onclick="abrirLinkWhatsApp()">Agendar</button>
+            </td>
+         `;
+          tabelaServicos.appendChild(novaLinha);
+          }
+        })
+      .catch(error => console.log(error));
   }
 
 
@@ -173,7 +203,6 @@ const servicosAbertos = [
         <td>${servico.nome}</td>
         <td>${servico.data}</td>
         <td>${servico.detalhes.hora}</td>
-        <td>${servico.serviço}</td>
         <td>${servico.responsaveltecnico}</td>
         <td>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalServicosAbertos" onclick="mostrarDetalhes('${encodeURIComponent(JSON.stringify(servico.detalhes))}')">Detalhes</button>
@@ -195,7 +224,6 @@ const servicosAbertos = [
         <td>${servico.nome}</td>
         <td>${servico.data}</td>
         <td>${servico.detalhes.hora}</td>
-        <td>${servico.serviço}</td>
         <td>${servico.responsaveltecnico}</td>
         <td>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalServicosAbertos" onclick="mostrarDetalhes('${encodeURIComponent(JSON.stringify(servico.detalhes))}')">Detalhes</button>
@@ -210,6 +238,7 @@ const servicosAbertos = [
 
   function mostrarDetalhes(servicoDetalhes) {
     const detalhes = JSON.parse(decodeURIComponent(servicoDetalhes));
+    const valorNumerico = parseFloat(detalhes.valor);
     const modalCliente = document.querySelector("#modalServicosAbertos .modal-body .col-md-6:nth-child(1) li:nth-child(1) p");
     const modalServico = document.querySelector("#modalServicosAbertos .modal-body .col-md-6:nth-child(1) li:nth-child(2) p");
     const modalData = document.querySelector("#modalServicosAbertos .modal-body .col-md-6:nth-child(1) li:nth-child(3) p");
@@ -221,16 +250,16 @@ const servicosAbertos = [
     const modalValorServico = document.querySelector("#modalServicosAbertos .modal-body .col-md-6:nth-child(2) li:nth-child(4) p");
     const modalValorReceber = document.querySelector("#modalServicosAbertos .modal-body .col-md-6:nth-child(2) li:nth-child(5) p");
   
-    modalCliente.textContent = detalhes.nome;
-    modalServico.textContent = detalhes.servico;
-    modalData.textContent = detalhes.data;
-    modalHora.textContent = detalhes.hora;
-    modalLocal.textContent = detalhes.local;
-    modalEndereco.textContent = detalhes.endereco;
+    modalCliente.textContent = detalhes.cliente_nome;
+    modalServico.textContent = detalhes.funcionario_nome;
+    modalData.textContent = `${new Date(detalhes.data).toLocaleDateString()}`;
+    modalHora.textContent = detalhes.horario;
+    modalLocal.textContent = detalhes.bairro;
+    modalEndereco.textContent = `${detalhes.logradouro} - Nº${detalhes.numero} - ${detalhes.bairro}`;
     modalTelefone.textContent = detalhes.telefone;
-    modalArea.textContent = detalhes.tamanho;
-    modalValorServico.textContent = detalhes.valorServico;
-    modalValorReceber.textContent = detalhes.valorReceber;
+    modalArea.textContent = detalhes.area;
+    modalValorServico.textContent = detalhes.valor;
+    modalValorReceber.textContent = `${(valorNumerico * 0.7).toFixed(2)}`;
   }
   
   preencherTabelaServicosAbertos();

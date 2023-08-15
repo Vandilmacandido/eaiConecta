@@ -111,7 +111,7 @@
   // }
 
 
-// const api = 'https://eaiconecta-api.onrender.com';
+// const api = 'https://eai-api-complementar.onrender.com';
 const codigoEmpresa = localStorage.getItem('CodEmpresa');
 const nomedaEmpresa = localStorage.getItem('Nome_Fantasia');
 const verificacaoContrato = localStorage.getItem('verificacaoContrato');
@@ -119,9 +119,9 @@ const verificacao = localStorage.getItem('Verificacao');
 // const verificacao = localStorage.setItem('Verficacao');
 const btnAceitarPedido = document.querySelector(".btn-aceitar-pedido");
 const contractModal = document.getElementById('contractModal');
-console.log('Codigo da empresa' + codigoEmpresa)
-console.log('Contrato' + verificacaoContrato)
-console.log('Verificação' + verificacao);
+console.log('Codigo da empresa: ' + codigoEmpresa)
+console.log('Contrato: ' + verificacaoContrato)
+console.log('Verificação: ' + verificacao);
 
 btnAceitarPedido.addEventListener("click", aceitarPedido);
 
@@ -177,6 +177,7 @@ function preencherTabelaServicos() {
 
   function mostrarDetalhes(servicoDetalhes) {
     const detalhes = JSON.parse(decodeURIComponent(servicoDetalhes));
+    const valorNumerico = parseFloat(detalhes.valor);
     const modalCodigo = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(1) li:nth-child(1) p");
     const modalCliente = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(1) li:nth-child(2) p");
     const modalServico = document.querySelector("#modalDetalhesPedidos .modal-body .col-md-6:nth-child(1) li:nth-child(3) p");
@@ -199,7 +200,7 @@ function preencherTabelaServicos() {
     modalTelefone.textContent = detalhes.telefone;
     modalArea.textContent = detalhes.area;
     modalValorServico.textContent = detalhes.valor;
-    modalValorReceber.textContent = `${detalhes.Valor * 0.7},00`;
+    modalValorReceber.textContent = `${(valorNumerico * 0.7).toFixed(2)}`;
   }
   
 // FIM LISTAR PEDIDO
@@ -351,8 +352,10 @@ function aceitarPedido() {
 
   const data = {
     "CodFuncionario": codFuncionario,
-    "CodAgendamento": codAgendamento
+    "CodEmpresa":codigoEmpresa
   };
+
+  console.log(codigoEmpresa)
 
 
   fetch(`${api}/agendamento/atribuir/${codAgendamento}`, {
@@ -377,7 +380,7 @@ function fecharMensagem() {
   document.getElementById("contractMessage").style.display = "none";
 }
 
-
+console.log()
 
 function habilitarFuncionalidades() {
   // Verifica se o contrato está ativado e a conta foi verificada
@@ -389,7 +392,8 @@ function habilitarFuncionalidades() {
     // Caso contrário, desabilita o botão de aceitar pedido
     btnAceitarPedido.setAttribute("disabled", true);
     document.getElementById("contractMessage").style.display = "block";
-    contractModal.classList.add('show');
+    $('#contractModal').modal('show');
+    console.log('oi')
   }
 }
 
@@ -399,6 +403,7 @@ if (verificacaoContrato === '1' && verificacao === '1') {
   adicionarFuncionario();
   preencherTabelaServicos();
 }
+
 
 habilitarFuncionalidades();
 
