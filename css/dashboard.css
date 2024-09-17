@@ -1,0 +1,85 @@
+.bg-gradient-primary {
+  background-color: #f25116;
+  background-image: none;
+}
+
+ #picture__input {
+        display: none;
+      }
+    
+      .picture {
+        width: 150px;
+        aspect-ratio: 3/4;
+        background: #ddd;
+        display: flex;
+        margin-top: 0%;
+        align-items: center;
+        justify-content: center;
+        color: #aaa;
+        border: 2px dashed currentcolor;
+        cursor: pointer;
+        font-family: sans-serif;
+        transition: color 300ms ease-in-out, background 300ms ease-in-out;
+        outline: none;
+        overflow: hidden;
+      }
+    
+      .picture:hover {
+        color: #777;
+        background: #ccc;
+      }
+    
+      .picture:active {
+        border-color: #2A438C;
+        color: #2A438C;
+        background: #eee;
+      }
+    
+      .picture:focus {
+        color: #777;
+        background: #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+    
+      .picture__img {
+        max-width: 100%;
+      }
+      h1 {
+        color:#2A438C;
+      }
+      
+      form{
+        text-align: justify;
+        color: #2A438C;
+        
+      }
+	  
+.inputError {
+  background-color: #ffcccc; /* muda a cor de fundo para vermelho claro */
+  border-color: #ff0000; /* muda a cor da borda para vermelho */
+}
+nav{
+  text color: #2A438C;
+}
+
+.contract-message {
+  width: 200px;
+  position: fixed;
+  bottom: 4rem;
+  right: 1.1rem;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.close-contract-message {
+  margin-top: 10px;
+  background-color: white;
+  color: red;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
